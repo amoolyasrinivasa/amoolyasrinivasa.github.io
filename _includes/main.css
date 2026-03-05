@@ -1186,7 +1186,6 @@ pre {
   -webkit-transition: all ease-in-out 0.2s;
           transition: all ease-in-out 0.2s;
 }
-
 /* Modern minimal refresh */
 :root {
   --bg: #f6f8fb;
@@ -1331,4 +1330,108 @@ li {
   .header-home > .title {
     font-size: 3.2rem;
   }
+}
+
+/* Colorful professional refresh */
+:root {
+  --bg: linear-gradient(135deg, #fef6ff 0%, #f0f8ff 45%, #f2fff7 100%);
+  --surface: #ffffff;
+  --text: #1f2a44;
+  --muted: #4f5b76;
+  --line: #e2e8ff;
+  --accent: #6c4df6;
+  --accent-2: #00a6a6;
+  --accent-3: #ff6b6b;
+  --accent-soft: #f2eeff;
+  --shadow: 0 14px 36px rgba(38, 65, 145, 0.12);
+}
+
+html,
+body {
+  background: var(--bg);
+  background-attachment: fixed;
+}
+
+.home,
+.blog,
+.projects,
+.page,
+.post {
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.header-home > .title {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.nav-home > .list > .item > .link,
+.nav > .list > .item > .link {
+  color: var(--text);
+}
+
+.nav-home > .list > .item > .link:hover,
+.nav > .list > .item > .link:hover {
+  color: var(--accent);
+  background: linear-gradient(90deg, #f3f0ff 0%, #e9fbfb 100%);
+  border-color: #d8d9ff;
+}
+
+.home > .list > .item > .url:hover,
+.blog > .list > .item > .url:hover,
+.projects > .list > .item > .url:hover {
+  background: linear-gradient(90deg, #faf8ff 0%, #f4fffd 100%);
+}
+
+h2 {
+  color: #3748a3;
+}
+
+h3,
+h4 {
+  color: #266276;
+}
+
+a:hover {
+  color: var(--accent-3);
+}
+
+/* Photo Frolics horizontal scroller */
+.photo-frolics-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 8px 4px 12px;
+  scroll-snap-type: x proximity;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #fbf8ff 0%, #f4fffd 100%);
+  border: 1px solid #e6ebff;
+}
+
+.photo-frolics-scroll img {
+  flex: 0 0 auto;
+  max-height: 200px;
+  width: auto;
+  border-radius: 10px;
+  scroll-snap-align: start;
+  box-shadow: 0 4px 12px rgba(27, 39, 94, 0.14);
+}
+
+.photo-frolics-scroll::-webkit-scrollbar {
+  height: 10px;
+}
+
+.photo-frolics-scroll::-webkit-scrollbar-track {
+  background: #e8edff;
+  border-radius: 999px;
+}
+
+.photo-frolics-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border-radius: 999px;
 }
