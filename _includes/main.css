@@ -1186,3 +1186,149 @@ pre {
   -webkit-transition: all ease-in-out 0.2s;
           transition: all ease-in-out 0.2s;
 }
+
+/* Modern minimal refresh */
+:root {
+  --bg: #f6f8fb;
+  --surface: #ffffff;
+  --text: #1f2937;
+  --muted: #5b6473;
+  --line: #e6eaf0;
+  --accent: #3659e3;
+  --accent-soft: #eef2ff;
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+html,
+body {
+  background: var(--bg);
+}
+
+body {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--text);
+}
+
+h1,
+h2,
+h3,
+h4,
+strong {
+  color: var(--text);
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 2px;
+}
+
+p,
+li {
+  color: var(--muted);
+}
+
+.wrapper-normal,
+.wrapper-large {
+  max-width: 960px;
+  margin: 32px auto;
+  width: calc(100% - 40px);
+}
+
+.home,
+.blog,
+.projects,
+.page,
+.post {
+  margin-top: 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 28px;
+}
+
+.header-home > .link > .selfie {
+  border: 4px solid #fff;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.14);
+}
+
+.header-home > .title {
+  font-size: 4.2rem;
+  letter-spacing: -0.02em;
+}
+
+.header-home > .description {
+  color: var(--muted);
+}
+
+.nav-home {
+  margin-top: 24px;
+}
+
+.nav-home > .list > .item > .link,
+.nav > .list > .item > .link {
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.nav-home > .list > .item > .link:hover,
+.nav > .list > .item > .link:hover {
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-color: #d9e0ff;
+}
+
+.home > .list,
+.blog > .list,
+.projects > .list,
+.footer-main {
+  border-top-color: var(--line);
+}
+
+.home > .list > .item > .url,
+.blog > .list > .item > .url,
+.projects > .list > .item > .url {
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.home > .list > .item > .url:hover,
+.blog > .list > .item > .url:hover,
+.projects > .list > .item > .url:hover {
+  border-color: var(--line);
+  background: #fafcff;
+}
+
+.footer-main {
+  margin-top: 28px;
+  color: var(--muted);
+}
+
+.social-links > .link:hover > .icon,
+.footer-main > .link > .icon:hover {
+  fill: var(--accent) !important;
+}
+
+@media only screen and (max-width: 780px) {
+  .wrapper-normal,
+  .wrapper-large {
+    width: calc(100% - 20px);
+    margin: 12px auto;
+  }
+
+  .home,
+  .blog,
+  .projects,
+  .page,
+  .post {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .header-home > .title {
+    font-size: 3.2rem;
+  }
+}
