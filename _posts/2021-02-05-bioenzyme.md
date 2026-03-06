@@ -75,7 +75,7 @@ MSA of chromium(VI) reductase homologs were obtained and aligned using the Clust
 
 The sequence plot for the secondary structure prediction obtained illustrates annotated residues as per predicted secondary structures, including helices, strands, and coils. Additionally, the secondary structure prediction of chromium(VI) reductase on SOPMA indicated the presence of 54.32% alpha-helices, 4.12% beta-turns, and 28.4% random coils.
 
-<img src="{{site.url}}/assets/images/bioenzyme/secstrpred.png" style="border:none" width="900" />
+<img src="{{site.url}}/assets/images/bioenzyme/secstrped.png" style="border:none" width="900" />
 
 A 3D model of hexavalent chromium reductase was obtained from I-TASSER and energy-minimized on YASARA. The energy of the model before and after minimization was computed on Swiss-PDBViewer and observed to be -9474.395 kJ mol-1 and -10068.428 kJ mol-1, respectively. The final model was visualized on PyMOL. The energy minimized model of Cr(VI) reductase obtained from ERRAT had a good overall quality factor of 97.425%, indicating high quality. VERIFY3D analysis showed that 63.37% of the residues in the energy minimized 3D model had an average 3D-1D score of >=0.2, indicating that the model is suitable for further analysis.
 

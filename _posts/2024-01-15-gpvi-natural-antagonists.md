@@ -24,7 +24,7 @@ The three-dimensional structure of the human platelet GPVI receptor (PDB ID: `2G
 
 ### Figure – GPVI Receptor Structure
 
-![Structure of GPVI receptor visualized in PyMOL](/assets/images/projects/gpvi/gpvi_structure.png)
+![Structure of GPVI receptor visualized in PyMOL](/assets/images/GPVI/gpvi.png)
 
 Binding site prediction identified several pockets within the receptor structure. Key residues including **Lys59, Arg60, and Arg166** were identified as critical for collagen binding and were therefore selected as target residues for docking analysis.
 
@@ -66,7 +66,7 @@ The docking results were ranked based on **free binding energy**, hydrogen bondi
 
 ### Figure – Protein–Ligand Docking Interactions
 
-![Docked complexes between GPVI and candidate flavonoids](/assets/images/projects/gpvi/docking_interactions.png)
+![Docked complexes between GPVI and candidate flavonoids](/assets/images/GPVI/dock.png)
 
 Several ligands showed strong interactions with the GPVI binding site, particularly through hydrogen bonding and hydrophobic contacts with key residues.
 
@@ -116,15 +116,15 @@ Simulation workflow included:
 
 ### Figure – Energy Minimization and System Stability
 
-![Energy minimization during MD simulation](/assets/images/projects/gpvi/energy_minimization.png)
+![Energy minimization during MD simulation](/assets/images/GPVI/MDS.png)
 
 ### Figure – Temperature Stabilization During Simulation
 
-![Temperature stabilization during simulation](/assets/images/projects/gpvi/temperature_plot.png)
+![Temperature stabilization during simulation](/assets/images/GPVI/MDS.png)
 
 ### Figure – Density Equilibration
 
-![Density progression of system during simulation](/assets/images/projects/gpvi/density_plot.png)
+![Density progression of system during simulation](/assets/images/GPVI/MDS.png)
 
 The MD simulations demonstrated:
 

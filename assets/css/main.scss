@@ -8,14 +8,20 @@ search: false
 @import "minimal-mistakes/skins/air";
 @import "minimal-mistakes";
 
-.photo-frolics-scroll {
-  display: flex;
-  gap: 0.75rem;
-  overflow-x: auto;
-  padding: 0.25rem 0;
+.page__hero--overlay {
+  min-height: 42vh;
 }
 
-.photo-frolics-scroll img {
-  border-radius: 8px;
-  flex: 0 0 auto;
+.science-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+.science-strip img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
 }

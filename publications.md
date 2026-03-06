@@ -1,3 +1,14 @@
+---
+title: Publications
+layout: single
+permalink: /publications/
+author_profile: true
+header:
+  overlay_color: "#14213d"
+  overlay_filter: 0.5
+  overlay_image: "https://images.unsplash.com/photo-1530026186672-2cd00ffc50fe?auto=format&fit=crop&w=1800&q=80"
+---
+
 # Publications
 
 1. This study leverages high-fidelity duplex sequencing on sequential sperm samples from 23 donors—collected over spans of 10 to 33 years—to directly measure how individual germline mutation rates increase with age. We found that while mutation burdens grow over time, clonal mutations established early in development remain stable, hinting at a preserved spermatogonial stem cell pool. These insights not only align with previous trio-based studies but also offer groundbreaking perspectives on aging-related mutation processes in the male germline.

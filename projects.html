@@ -4,6 +4,10 @@ layout: single
 permalink: /projects/
 author_profile: true
 classes: wide
+header:
+  overlay_color: "#1b263b"
+  overlay_filter: 0.5
+  overlay_image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=1800&q=80"
 ---
 
 {% assign project_posts = site.posts | where: "projects", true %}
@@ -12,7 +16,9 @@ classes: wide
 No project posts yet.
 {% else %}
 {% for post in project_posts %}
-- [{{ post.title }}]({{ post.url | relative_url }}) ({{ post.date | date: "%b %-d, %Y" }})
-  {% if post.description %}{{ post.description }}{% endif %}
+### [{{ post.title }}]({{ post.url | relative_url }})
+
+{{ post.date | date: "%b %-d, %Y" }}{% if post.description %} - {{ post.description }}{% endif %}
+
 {% endfor %}
 {% endif %}
