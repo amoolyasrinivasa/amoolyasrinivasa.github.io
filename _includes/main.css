@@ -1435,3 +1435,115 @@ a:hover {
   background: linear-gradient(90deg, var(--accent), var(--accent-2));
   border-radius: 999px;
 }
+
+/* Visual polish + subtle animations */
+:root {
+  --surface-glow: radial-gradient(circle at 12% 18%, rgba(108, 77, 246, 0.10), transparent 48%),
+                  radial-gradient(circle at 85% 5%, rgba(0, 166, 166, 0.10), transparent 50%);
+  --card-hover-shadow: 0 18px 42px rgba(46, 73, 157, 0.18);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background: var(--surface-glow);
+}
+
+.home,
+.blog,
+.projects,
+.page,
+.post {
+  position: relative;
+  overflow: hidden;
+  transition: transform 280ms ease, box-shadow 280ms ease, border-color 280ms ease;
+  animation: fadeInUp 650ms ease both;
+}
+
+.home:hover,
+.blog:hover,
+.projects:hover,
+.page:hover,
+.post:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--card-hover-shadow);
+  border-color: #cfd8ff;
+}
+
+.header-home > .link > .selfie {
+  transition: transform 320ms ease, box-shadow 320ms ease;
+}
+
+.header-home > .link > .selfie:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 10px 24px rgba(36, 57, 129, 0.24);
+}
+
+.header-home > .title {
+  animation: shimmerText 7s linear infinite;
+  background-size: 220% auto;
+}
+
+.nav-home > .list > .item > .link,
+.nav > .list > .item > .link,
+.home > .list > .item > .url,
+.blog > .list > .item > .url,
+.projects > .list > .item > .url,
+.social-links > .link > .icon,
+.footer-main > .link > .icon {
+  transition: all 220ms ease;
+}
+
+.home > .list > .item > .url:hover,
+.blog > .list > .item > .url:hover,
+.projects > .list > .item > .url:hover {
+  transform: translateX(4px);
+}
+
+.photo-frolics-scroll {
+  scroll-behavior: smooth;
+}
+
+.photo-frolics-scroll img {
+  transition: transform 220ms ease, box-shadow 220ms ease, filter 220ms ease;
+}
+
+.photo-frolics-scroll img:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(27, 39, 94, 0.24);
+  filter: saturate(1.08);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmerText {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 220% 50%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
