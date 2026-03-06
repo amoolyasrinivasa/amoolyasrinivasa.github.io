@@ -1619,3 +1619,55 @@ h4 {
 .projects > .list > .item > .url:hover {
   background: linear-gradient(90deg, #fff1f1 0%, #ffe7e7 100%);
 }
+
+/* Final purple palette + seamless darker science overlay */
+:root {
+  --bg: linear-gradient(135deg, #f8f3ff 0%, #f3efff 45%, #fbf7ff 100%);
+  --text: #2f1f45;
+  --muted: #5e4a78;
+  --line: #e4d8ff;
+  --accent: #6a1b9a;
+  --accent-2: #8e24aa;
+  --accent-3: #b23adb;
+  --accent-soft: #f2e7ff;
+  --shadow: 0 14px 36px rgba(88, 39, 133, 0.16);
+}
+
+/* seamless science texture without square tiling artifacts */
+body::before {
+  z-index: 0;
+  opacity: 0.95;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(106, 27, 154, 0.20) 0%, rgba(106, 27, 154, 0) 34%),
+    radial-gradient(circle at 82% 12%, rgba(142, 36, 170, 0.18) 0%, rgba(142, 36, 170, 0) 30%),
+    radial-gradient(circle at 72% 70%, rgba(125, 38, 173, 0.14) 0%, rgba(125, 38, 173, 0) 28%),
+    radial-gradient(circle at 28% 74%, rgba(178, 58, 219, 0.14) 0%, rgba(178, 58, 219, 0) 26%),
+    /* atom rings */
+    radial-gradient(circle at 18% 34%, rgba(106, 27, 154, 0.30) 0 1px, transparent 1.5px 24px, rgba(106, 27, 154, 0.22) 24px 25px, transparent 26px),
+    radial-gradient(circle at 66% 28%, rgba(142, 36, 170, 0.28) 0 1px, transparent 1.5px 19px, rgba(142, 36, 170, 0.2) 19px 20px, transparent 21px),
+    radial-gradient(circle at 80% 56%, rgba(125, 38, 173, 0.26) 0 1px, transparent 1.5px 16px, rgba(125, 38, 173, 0.2) 16px 17px, transparent 18px),
+    radial-gradient(circle at 34% 62%, rgba(178, 58, 219, 0.24) 0 1px, transparent 1.5px 14px, rgba(178, 58, 219, 0.18) 14px 15px, transparent 16px),
+    /* subtle connecting lines */
+    linear-gradient(32deg, transparent 0 47%, rgba(106, 27, 154, 0.13) 47.8% 48.4%, transparent 49.2% 100%),
+    linear-gradient(148deg, transparent 0 46%, rgba(142, 36, 170, 0.1) 46.8% 47.4%, transparent 48.2% 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+h2 {
+  color: #6a1b9a;
+}
+
+h3,
+h4 {
+  color: #7b2cbf;
+}
+
+.nav-home > .list > .item > .link:hover,
+.nav > .list > .item > .link:hover,
+.home > .list > .item > .url:hover,
+.blog > .list > .item > .url:hover,
+.projects > .list > .item > .url:hover {
+  background: linear-gradient(90deg, #f5edff 0%, #efe2ff 100%);
+}
