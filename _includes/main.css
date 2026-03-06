@@ -1547,3 +1547,16 @@ body::before {
     scroll-behavior: auto !important;
   }
 }
+
+/* Subtle science-themed background overlay */
+:root {
+  --science-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Cg fill='none' stroke='%236c4df6' stroke-width='1.2' opacity='0.16'%3E%3Ccircle cx='46' cy='58' r='16'/%3E%3Ccircle cx='92' cy='46' r='8'/%3E%3Ccircle cx='130' cy='78' r='12'/%3E%3Cline x1='62' y1='58' x2='84' y2='48'/%3E%3Cline x1='100' y1='50' x2='120' y2='70'/%3E%3Cline x1='58' y1='72' x2='78' y2='94'/%3E%3Ccircle cx='82' cy='98' r='7'/%3E%3Cline x1='90' y1='98' x2='116' y2='90'/%3E%3Cline x1='130' y1='90' x2='152' y2='108'/%3E%3Ccircle cx='160' cy='112' r='10'/%3E%3Cpath d='M162 36 l14 0 m-7 -7 l0 14'/%3E%3Cpath d='M198 178 l12 0 m-6 -6 l0 12'/%3E%3Cpath d='M28 168 q16 -18 34 0 q-18 22 -34 0z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+body::before {
+  background-image: var(--surface-glow), var(--science-pattern);
+  background-size: auto, 300px 300px;
+  background-repeat: no-repeat, repeat;
+  background-position: center top, 0 0;
+  opacity: 0.55;
+}
