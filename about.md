@@ -27,7 +27,7 @@ During my leisure hours, I enjoy indulging in various creative pursuits, such as
 
 ---**Photo Frolics**
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+<div class="photo-frolics-scroll">
     <img src="{{site.url}}/assets/images/bbq.jpg" style="border:none; width:auto; max-height:200px;" />
      <img src="{{site.url}}/assets/images/grad.jpg" style="border:none; width:auto; max-height:200px;" />
     <img src="{{site.url}}/assets/images/bowl.jpg" style="border:none; width:auto; max-height:200px;" />

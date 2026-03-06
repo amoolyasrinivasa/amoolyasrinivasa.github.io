@@ -1186,3 +1186,488 @@ pre {
   -webkit-transition: all ease-in-out 0.2s;
           transition: all ease-in-out 0.2s;
 }
+/* Modern minimal refresh */
+:root {
+  --bg: #f6f8fb;
+  --surface: #ffffff;
+  --text: #1f2937;
+  --muted: #5b6473;
+  --line: #e6eaf0;
+  --accent: #3659e3;
+  --accent-soft: #eef2ff;
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+html,
+body {
+  background: var(--bg);
+}
+
+body {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--text);
+}
+
+h1,
+h2,
+h3,
+h4,
+strong {
+  color: var(--text);
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 2px;
+}
+
+p,
+li {
+  color: var(--muted);
+}
+
+.wrapper-normal,
+.wrapper-large {
+  max-width: 960px;
+  margin: 32px auto;
+  width: calc(100% - 40px);
+}
+
+.home,
+.blog,
+.projects,
+.page,
+.post {
+  margin-top: 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 28px;
+}
+
+.header-home > .link > .selfie {
+  border: 4px solid #fff;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.14);
+}
+
+.header-home > .title {
+  font-size: 4.2rem;
+  letter-spacing: -0.02em;
+}
+
+.header-home > .description {
+  color: var(--muted);
+}
+
+.nav-home {
+  margin-top: 24px;
+}
+
+.nav-home > .list > .item > .link,
+.nav > .list > .item > .link {
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.nav-home > .list > .item > .link:hover,
+.nav > .list > .item > .link:hover {
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-color: #d9e0ff;
+}
+
+.home > .list,
+.blog > .list,
+.projects > .list,
+.footer-main {
+  border-top-color: var(--line);
+}
+
+.home > .list > .item > .url,
+.blog > .list > .item > .url,
+.projects > .list > .item > .url {
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.home > .list > .item > .url:hover,
+.blog > .list > .item > .url:hover,
+.projects > .list > .item > .url:hover {
+  border-color: var(--line);
+  background: #fafcff;
+}
+
+.footer-main {
+  margin-top: 28px;
+  color: var(--muted);
+}
+
+.social-links > .link:hover > .icon,
+.footer-main > .link > .icon:hover {
+  fill: var(--accent) !important;
+}
+
+@media only screen and (max-width: 780px) {
+  .wrapper-normal,
+  .wrapper-large {
+    width: calc(100% - 20px);
+    margin: 12px auto;
+  }
+
+  .home,
+  .blog,
+  .projects,
+  .page,
+  .post {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .header-home > .title {
+    font-size: 3.2rem;
+  }
+}
+
+/* Colorful professional refresh */
+:root {
+  --bg: linear-gradient(135deg, #fef6ff 0%, #f0f8ff 45%, #f2fff7 100%);
+  --surface: #ffffff;
+  --text: #1f2a44;
+  --muted: #4f5b76;
+  --line: #e2e8ff;
+  --accent: #6c4df6;
+  --accent-2: #00a6a6;
+  --accent-3: #ff6b6b;
+  --accent-soft: #f2eeff;
+  --shadow: 0 14px 36px rgba(38, 65, 145, 0.12);
+}
+
+html,
+body {
+  background: var(--bg);
+  background-attachment: fixed;
+}
+
+.home,
+.blog,
+.projects,
+.page,
+.post {
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.header-home > .title {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.nav-home > .list > .item > .link,
+.nav > .list > .item > .link {
+  color: var(--text);
+}
+
+.nav-home > .list > .item > .link:hover,
+.nav > .list > .item > .link:hover {
+  color: var(--accent);
+  background: linear-gradient(90deg, #f3f0ff 0%, #e9fbfb 100%);
+  border-color: #d8d9ff;
+}
+
+.home > .list > .item > .url:hover,
+.blog > .list > .item > .url:hover,
+.projects > .list > .item > .url:hover {
+  background: linear-gradient(90deg, #faf8ff 0%, #f4fffd 100%);
+}
+
+h2 {
+  color: #3748a3;
+}
+
+h3,
+h4 {
+  color: #266276;
+}
+
+a:hover {
+  color: var(--accent-3);
+}
+
+/* Photo Frolics horizontal scroller */
+.photo-frolics-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 8px 4px 12px;
+  scroll-snap-type: x proximity;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #fbf8ff 0%, #f4fffd 100%);
+  border: 1px solid #e6ebff;
+}
+
+.photo-frolics-scroll img {
+  flex: 0 0 auto;
+  max-height: 200px;
+  width: auto;
+  border-radius: 10px;
+  scroll-snap-align: start;
+  box-shadow: 0 4px 12px rgba(27, 39, 94, 0.14);
+}
+
+.photo-frolics-scroll::-webkit-scrollbar {
+  height: 10px;
+}
+
+.photo-frolics-scroll::-webkit-scrollbar-track {
+  background: #e8edff;
+  border-radius: 999px;
+}
+
+.photo-frolics-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border-radius: 999px;
+}
+
+/* Visual polish + subtle animations */
+:root {
+  --surface-glow: radial-gradient(circle at 12% 18%, rgba(108, 77, 246, 0.10), transparent 48%),
+                  radial-gradient(circle at 85% 5%, rgba(0, 166, 166, 0.10), transparent 50%);
+  --card-hover-shadow: 0 18px 42px rgba(46, 73, 157, 0.18);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background: var(--surface-glow);
+}
+
+.home,
+.blog,
+.projects,
+.page,
+.post {
+  position: relative;
+  overflow: hidden;
+  transition: transform 280ms ease, box-shadow 280ms ease, border-color 280ms ease;
+  animation: fadeInUp 650ms ease both;
+}
+
+.home:hover,
+.blog:hover,
+.projects:hover,
+.page:hover,
+.post:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--card-hover-shadow);
+  border-color: #cfd8ff;
+}
+
+.header-home > .link > .selfie {
+  transition: transform 320ms ease, box-shadow 320ms ease;
+}
+
+.header-home > .link > .selfie:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 10px 24px rgba(36, 57, 129, 0.24);
+}
+
+.header-home > .title {
+  animation: shimmerText 7s linear infinite;
+  background-size: 220% auto;
+}
+
+.nav-home > .list > .item > .link,
+.nav > .list > .item > .link,
+.home > .list > .item > .url,
+.blog > .list > .item > .url,
+.projects > .list > .item > .url,
+.social-links > .link > .icon,
+.footer-main > .link > .icon {
+  transition: all 220ms ease;
+}
+
+.home > .list > .item > .url:hover,
+.blog > .list > .item > .url:hover,
+.projects > .list > .item > .url:hover {
+  transform: translateX(4px);
+}
+
+.photo-frolics-scroll {
+  scroll-behavior: smooth;
+}
+
+.photo-frolics-scroll img {
+  transition: transform 220ms ease, box-shadow 220ms ease, filter 220ms ease;
+}
+
+.photo-frolics-scroll img:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(27, 39, 94, 0.24);
+  filter: saturate(1.08);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmerText {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 220% 50%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Subtle science-themed background overlay */
+:root {
+  --science-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Cg fill='none' stroke='%236c4df6' stroke-width='1.2' opacity='0.16'%3E%3Ccircle cx='46' cy='58' r='16'/%3E%3Ccircle cx='92' cy='46' r='8'/%3E%3Ccircle cx='130' cy='78' r='12'/%3E%3Cline x1='62' y1='58' x2='84' y2='48'/%3E%3Cline x1='100' y1='50' x2='120' y2='70'/%3E%3Cline x1='58' y1='72' x2='78' y2='94'/%3E%3Ccircle cx='82' cy='98' r='7'/%3E%3Cline x1='90' y1='98' x2='116' y2='90'/%3E%3Cline x1='130' y1='90' x2='152' y2='108'/%3E%3Ccircle cx='160' cy='112' r='10'/%3E%3Cpath d='M162 36 l14 0 m-7 -7 l0 14'/%3E%3Cpath d='M198 178 l12 0 m-6 -6 l0 12'/%3E%3Cpath d='M28 168 q16 -18 34 0 q-18 22 -34 0z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+body::before {
+  background-image: var(--surface-glow), var(--science-pattern);
+  background-size: auto, 300px 300px;
+  background-repeat: no-repeat, repeat;
+  background-position: center top, 0 0;
+  opacity: 0.55;
+}
+
+/* Red palette override + ensure science overlay is visible */
+:root {
+  --bg: linear-gradient(135deg, #fff5f5 0%, #fff0f1 45%, #fff8f6 100%);
+  --text: #3f1f1f;
+  --muted: #6e4545;
+  --line: #f3d7d9;
+  --accent: #c62828;
+  --accent-2: #e53935;
+  --accent-3: #ff6f61;
+  --accent-soft: #ffe7e7;
+  --shadow: 0 14px 36px rgba(164, 34, 34, 0.14);
+  --surface-glow: radial-gradient(circle at 12% 18%, rgba(198, 40, 40, 0.12), transparent 48%),
+                  radial-gradient(circle at 85% 5%, rgba(229, 57, 53, 0.10), transparent 50%);
+  --science-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Cg fill='none' stroke='%23c62828' stroke-width='1.2' opacity='0.20'%3E%3Ccircle cx='46' cy='58' r='16'/%3E%3Ccircle cx='92' cy='46' r='8'/%3E%3Ccircle cx='130' cy='78' r='12'/%3E%3Cline x1='62' y1='58' x2='84' y2='48'/%3E%3Cline x1='100' y1='50' x2='120' y2='70'/%3E%3Cline x1='58' y1='72' x2='78' y2='94'/%3E%3Ccircle cx='82' cy='98' r='7'/%3E%3Cline x1='90' y1='98' x2='116' y2='90'/%3E%3Cline x1='130' y1='90' x2='152' y2='108'/%3E%3Ccircle cx='160' cy='112' r='10'/%3E%3Cpath d='M162 36 l14 0 m-7 -7 l0 14'/%3E%3Cpath d='M198 178 l12 0 m-6 -6 l0 12'/%3E%3Cpath d='M28 168 q16 -18 34 0 q-18 22 -34 0z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+html,
+body {
+  background: var(--bg);
+  background-attachment: fixed;
+}
+
+body {
+  position: relative;
+  isolation: isolate;
+}
+
+body::before {
+  z-index: 0;
+  background-image: var(--surface-glow), var(--science-pattern);
+  background-size: auto, 280px 280px;
+  background-repeat: no-repeat, repeat;
+  background-position: center top, 0 0;
+  opacity: 0.75;
+}
+
+.wrapper-normal,
+.wrapper-large {
+  position: relative;
+  z-index: 1;
+}
+
+h2 {
+  color: #8d1f1f;
+}
+
+h3,
+h4 {
+  color: #b03a3a;
+}
+
+.nav-home > .list > .item > .link:hover,
+.nav > .list > .item > .link:hover,
+.home > .list > .item > .url:hover,
+.blog > .list > .item > .url:hover,
+.projects > .list > .item > .url:hover {
+  background: linear-gradient(90deg, #fff1f1 0%, #ffe7e7 100%);
+}
+
+/* Final purple palette + seamless darker science overlay */
+:root {
+  --bg: linear-gradient(135deg, #f8f3ff 0%, #f3efff 45%, #fbf7ff 100%);
+  --text: #2f1f45;
+  --muted: #5e4a78;
+  --line: #e4d8ff;
+  --accent: #6a1b9a;
+  --accent-2: #8e24aa;
+  --accent-3: #b23adb;
+  --accent-soft: #f2e7ff;
+  --shadow: 0 14px 36px rgba(88, 39, 133, 0.16);
+}
+
+/* seamless science texture without square tiling artifacts */
+body::before {
+  z-index: 0;
+  opacity: 0.95;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(106, 27, 154, 0.20) 0%, rgba(106, 27, 154, 0) 34%),
+    radial-gradient(circle at 82% 12%, rgba(142, 36, 170, 0.18) 0%, rgba(142, 36, 170, 0) 30%),
+    radial-gradient(circle at 72% 70%, rgba(125, 38, 173, 0.14) 0%, rgba(125, 38, 173, 0) 28%),
+    radial-gradient(circle at 28% 74%, rgba(178, 58, 219, 0.14) 0%, rgba(178, 58, 219, 0) 26%),
+    /* atom rings */
+    radial-gradient(circle at 18% 34%, rgba(106, 27, 154, 0.30) 0 1px, transparent 1.5px 24px, rgba(106, 27, 154, 0.22) 24px 25px, transparent 26px),
+    radial-gradient(circle at 66% 28%, rgba(142, 36, 170, 0.28) 0 1px, transparent 1.5px 19px, rgba(142, 36, 170, 0.2) 19px 20px, transparent 21px),
+    radial-gradient(circle at 80% 56%, rgba(125, 38, 173, 0.26) 0 1px, transparent 1.5px 16px, rgba(125, 38, 173, 0.2) 16px 17px, transparent 18px),
+    radial-gradient(circle at 34% 62%, rgba(178, 58, 219, 0.24) 0 1px, transparent 1.5px 14px, rgba(178, 58, 219, 0.18) 14px 15px, transparent 16px),
+    /* subtle connecting lines */
+    linear-gradient(32deg, transparent 0 47%, rgba(106, 27, 154, 0.13) 47.8% 48.4%, transparent 49.2% 100%),
+    linear-gradient(148deg, transparent 0 46%, rgba(142, 36, 170, 0.1) 46.8% 47.4%, transparent 48.2% 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+h2 {
+  color: #6a1b9a;
+}
+
+h3,
+h4 {
+  color: #7b2cbf;
+}
+
+.nav-home > .list > .item > .link:hover,
+.nav > .list > .item > .link:hover,
+.home > .list > .item > .url:hover,
+.blog > .list > .item > .url:hover,
+.projects > .list > .item > .url:hover {
+  background: linear-gradient(90deg, #f5edff 0%, #efe2ff 100%);
+}
