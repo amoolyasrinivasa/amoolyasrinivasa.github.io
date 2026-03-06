@@ -1560,3 +1560,62 @@ body::before {
   background-position: center top, 0 0;
   opacity: 0.55;
 }
+
+/* Red palette override + ensure science overlay is visible */
+:root {
+  --bg: linear-gradient(135deg, #fff5f5 0%, #fff0f1 45%, #fff8f6 100%);
+  --text: #3f1f1f;
+  --muted: #6e4545;
+  --line: #f3d7d9;
+  --accent: #c62828;
+  --accent-2: #e53935;
+  --accent-3: #ff6f61;
+  --accent-soft: #ffe7e7;
+  --shadow: 0 14px 36px rgba(164, 34, 34, 0.14);
+  --surface-glow: radial-gradient(circle at 12% 18%, rgba(198, 40, 40, 0.12), transparent 48%),
+                  radial-gradient(circle at 85% 5%, rgba(229, 57, 53, 0.10), transparent 50%);
+  --science-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Cg fill='none' stroke='%23c62828' stroke-width='1.2' opacity='0.20'%3E%3Ccircle cx='46' cy='58' r='16'/%3E%3Ccircle cx='92' cy='46' r='8'/%3E%3Ccircle cx='130' cy='78' r='12'/%3E%3Cline x1='62' y1='58' x2='84' y2='48'/%3E%3Cline x1='100' y1='50' x2='120' y2='70'/%3E%3Cline x1='58' y1='72' x2='78' y2='94'/%3E%3Ccircle cx='82' cy='98' r='7'/%3E%3Cline x1='90' y1='98' x2='116' y2='90'/%3E%3Cline x1='130' y1='90' x2='152' y2='108'/%3E%3Ccircle cx='160' cy='112' r='10'/%3E%3Cpath d='M162 36 l14 0 m-7 -7 l0 14'/%3E%3Cpath d='M198 178 l12 0 m-6 -6 l0 12'/%3E%3Cpath d='M28 168 q16 -18 34 0 q-18 22 -34 0z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+html,
+body {
+  background: var(--bg);
+  background-attachment: fixed;
+}
+
+body {
+  position: relative;
+  isolation: isolate;
+}
+
+body::before {
+  z-index: 0;
+  background-image: var(--surface-glow), var(--science-pattern);
+  background-size: auto, 280px 280px;
+  background-repeat: no-repeat, repeat;
+  background-position: center top, 0 0;
+  opacity: 0.75;
+}
+
+.wrapper-normal,
+.wrapper-large {
+  position: relative;
+  z-index: 1;
+}
+
+h2 {
+  color: #8d1f1f;
+}
+
+h3,
+h4 {
+  color: #b03a3a;
+}
+
+.nav-home > .list > .item > .link:hover,
+.nav > .list > .item > .link:hover,
+.home > .list > .item > .url:hover,
+.blog > .list > .item > .url:hover,
+.projects > .list > .item > .url:hover {
+  background: linear-gradient(90deg, #fff1f1 0%, #ffe7e7 100%);
+}
