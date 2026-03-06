@@ -1,8 +1,8 @@
 ---
 title: "Identification of Natural GPVI Receptor Antagonists Using Molecular Docking and Molecular Dynamics"
-layout: post
+layout: single
 date: 2024-01-15
-tag:
+tags:
 - Structural bioinformatics
 - Molecular docking
 - Molecular dynamics

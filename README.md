@@ -1,6 +1,12 @@
-Personal site built with Jekyll and [Sergio Kopplin's Indigo theme](https://github.com/sergiokopplin/indigo/fork)
+Personal site built with Jekyll using the [Minimal Mistakes theme](https://github.com/mmistakes/minimal-mistakes).
 
----
+## Local development
+
+```bash
+bundle install
+bundle exec jekyll serve
+```
+
 ## License
 
-[MIT](https://kopplin.mit-license.org/) License © Sérgio Kopplin
+Content and images are owned by the site author unless otherwise noted.

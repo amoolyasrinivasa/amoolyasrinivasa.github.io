@@ -1,9 +1,9 @@
 ---
 title: "Production and Estimation of Ascorbic Acid in Biocatalytic Enzyme from Citrus Fruit Peels for Bioremediation of Heavy Metals in Agricultural Fields and in-silico docking, molcular modeling and mutational analysis
 "
-layout: post
+layout: single
 date: 2020-12-11
-tag:
+tags:
 - Biocatalytic enzyme 
 - Citrus fruits
 - Bioremiediation 

@@ -1,9 +1,9 @@
 ---
 title: "Cervical Cancer Risk Factors Analysis with Machine Learning Models
 "
-layout: post
+layout: single
 date: 2020-12-11
-tag:
+tags:
 - Cervical cancer risk factors dataset
 - Artificial Neural Network
 - Random Forest

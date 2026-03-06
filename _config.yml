@@ -1,85 +1,88 @@
-# main text of home
-name: Amoolya Srinivasa
-bio: 'Bioinformatics Programmer at NYU Langone Health'
- 
-# if it's an external image, update below for true
-external-image: false
-picture: 'assets/images/Amoolya.jpg'
+locale: en-US
+title: "Amoolya Srinivasa"
+title_separator: "|"
+subtitle: "Bioinformatics Programmer at NYU Langone Health"
+name: "Amoolya Srinivasa"
+description: "Bioinformatics, computational biology, and data-driven research projects."
+url: "https://amoolyasrinivasa.github.io"
+baseurl: ""
+repository: "amoolyasrinivasa/amoolyasrinivasa.github.io"
 
-url: http://amoolyasrinivasa.github.io
-# your url: http://USERNAME.github.io (if you don't already have a site)
+remote_theme: "mmistakes/minimal-mistakes@4.27.3"
 
-permalink: /:title/
-theme: jekyll-theme-merlot
-markdown: kramdown
-highlighter: rouge # other options?
-
-# To enable google analytics, supply your token below
-# analytics-google: 'UA-MYANALYTICS'
-
-# To enable piwik tracking, supply your url & site ID below
-# analytics-piwik-url: 'piwik.my-host.com'
-# analytics-piwik-id: 1
-
-# if you don't want comments in your posts, set to false
-disqus: false
-
-# if you don't have any of social below, comment the line
-# facebook:
-# google: mygoogle
-# instagram: myinstagram
-# pinterest: mypinterest
-# youtube: myyoutube
-# spotify: myspotify
-linkedin: amoolya-srinivasa
-github: amoolyasrinivasa
-email: amoolyasrinivasa@gmail.com
-#gscholar: O4Hrt44AAAAJ&hl=en
-#medium: medium
-#vimeo: myvimeo
-
-# do you want a larger site? change the option below
-# options: [normal, large] | default: normal
-# normal = 560px / large = 810px
-width: large
-
-# if you don't need pagination, comment the *paginate* configs below
-# paginate: 5
-# paginate_path: "blog/:num/"
-
-# if you don't need projects, comment the *projects* configs below
-# if you don't need "about" or "blog", comment them out below
-# likewise, comment out lists, research, or bookshelf pages
-about: true
-blog: false
-cv: true
-projects: true
-modalities: false
-maverick: false
-publications: true
-bookshelf: false
-
-# do you want to show the "read time" of the posts?
-read-time: true
-
-# do you want to show the "tags" inside the posts?
-show-tags: true
-
-# related posts inside a post?
-related: true
-
-# do you want some animations?
-animation: true
-
-gems:
-  - jekyll-mentions
-  - jekyll-seo-tag
+plugins:
+  - jekyll-remote-theme
+  - jekyll-include-cache
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-gist
   - jekyll-paginate
 
-jekyll-mentions:
-    base_url: https://github.com
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+picture: "assets/images/Amoolya.jpg"
 
-exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, indigo-gh-pages.zip, Rakefile,travis.sh]
+search: true
+breadcrumbs: true
+read_time: true
+words_per_minute: 200
+comments:
+  provider: false
+
+author:
+  name: "Amoolya Srinivasa"
+  avatar: "/assets/images/Amoolya.jpg"
+  bio: "Bioinformatics Programmer at NYU Langone Health"
+  location: "New York, NY"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:amoolyasrinivasa@gmail.com"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/amoolya-srinivasa"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/amoolyasrinivasa"
+
+footer:
+  links:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/amoolya-srinivasa"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/amoolyasrinivasa"
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      share: true
+      related: true
+      show_date: true
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - _legacy_theme

@@ -1,16 +1,18 @@
 ---
-layout: page
 title: Projects
+layout: single
+permalink: /projects/
+author_profile: true
+classes: wide
 ---
-<section class="list">
-    {% for post in site.posts %}
-        {% if post.projects %}
-            <div class="item {% if post.star %}star{% endif %}">
-                <a class="url" href="{% if post.externalLink %}{{ post.externalLink }}{% else %}{{ site.url }}{{ post.url }}{% endif %}">
-                    <aside><time datetime="{{ post.date | date:"%d-%m-%Y" }}">{{ post.date | date: "%b %d %Y" }}</time></aside>
-                    <h3 class="title">{{ post.title }}</h3>
-                </a>
-            </div>
-        {% endif %}
-    {% endfor %}
-</section>
+
+{% assign project_posts = site.posts | where: "projects", true %}
+
+{% if project_posts.size == 0 %}
+No project posts yet.
+{% else %}
+{% for post in project_posts %}
+- [{{ post.title }}]({{ post.url | relative_url }}) ({{ post.date | date: "%b %-d, %Y" }})
+  {% if post.description %}{{ post.description }}{% endif %}
+{% endfor %}
+{% endif %}

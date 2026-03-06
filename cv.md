@@ -1,7 +1,9 @@
 ---
 title: Vitae
-layout: page
-permalink: /cv/index.html
+layout: single
+permalink: /cv/
+author_profile: true
+classes: wide
 ---
 ## Amoolya Srinivasa
 <!---[srinivasa.a@northeastern.edu](mailto:srinivasa.@northeastern.edu) --->

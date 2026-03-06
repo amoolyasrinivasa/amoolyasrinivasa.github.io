@@ -1,7 +1,9 @@
 ---
 title: About
-layout: page
-permalink: /about/index.html
+layout: single
+permalink: /about/
+author_profile: true
+classes: wide
 ---
 
 <img src="{{ site.url }}/{{ site.picture }}" style="width:300px;"/>
