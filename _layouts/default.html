@@ -15,7 +15,7 @@ layout: compress
   <link rel="stylesheet" href="{{ '/css/normalize.css' | relative_url }}"/>
   <link rel="stylesheet" href="{{ '/fonts/font-awesome/css/font-awesome.css' | relative_url }}"/>
   <link rel="stylesheet" href="{{ '/css/modern-blog.css' | relative_url }}"/>
-  <link rel="stylesheet" href="{{ '/assets/css/main.css?v=20260309j' | relative_url }}"/>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css?v=20260309k' | relative_url }}"/>
 </head>
 <body class="body">
 <div class="container">
@@ -87,13 +87,25 @@ layout: compress
     var lightbox = document.getElementById("photo-lightbox");
     var lightboxImage = document.getElementById("photo-lightbox-image");
     var closeButton = document.querySelector(".photo-lightbox-close");
+    var prevButton = document.querySelector(".photo-lightbox-prev");
+    var nextButton = document.querySelector(".photo-lightbox-next");
     if (!lightbox || !lightboxImage) return;
+
+    var photos = Array.prototype.slice.call(scrollEl.querySelectorAll(".frolics-photo"));
+    var currentIndex = -1;
+
+    function showPhoto(index) {
+      if (!photos.length) return;
+      currentIndex = (index + photos.length) % photos.length;
+      var active = photos[currentIndex];
+      lightboxImage.src = active.src;
+      lightboxImage.alt = active.alt || "Expanded photo";
+    }
 
     scrollEl.addEventListener("click", function (event) {
       var img = event.target.closest(".frolics-photo");
       if (!img) return;
-      lightboxImage.src = img.src;
-      lightboxImage.alt = img.alt || "Expanded photo";
+      showPhoto(photos.indexOf(img));
       lightbox.classList.add("open");
       lightbox.setAttribute("aria-hidden", "false");
       document.body.style.overflow = "hidden";
@@ -106,18 +118,31 @@ layout: compress
       document.body.style.overflow = "";
     }
 
+    function showNext() {
+      if (currentIndex < 0) return;
+      showPhoto(currentIndex + 1);
+    }
+
+    function showPrev() {
+      if (currentIndex < 0) return;
+      showPhoto(currentIndex - 1);
+    }
+
     if (closeButton) {
       closeButton.addEventListener("click", closeLightbox);
     }
+    if (prevButton) prevButton.addEventListener("click", showPrev);
+    if (nextButton) nextButton.addEventListener("click", showNext);
 
     lightbox.addEventListener("click", function (event) {
       if (event.target === lightbox) closeLightbox();
     });
 
     document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape" && lightbox.classList.contains("open")) {
-        closeLightbox();
-      }
+      if (!lightbox.classList.contains("open")) return;
+      if (event.key === "Escape") closeLightbox();
+      if (event.key === "ArrowRight") showNext();
+      if (event.key === "ArrowLeft") showPrev();
     });
   })();
 </script>

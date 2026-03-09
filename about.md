@@ -60,8 +60,10 @@ During my leisure hours, I enjoy indulging in various creative pursuits, such as
 </div>
 
 <div class="photo-lightbox" id="photo-lightbox" aria-hidden="true">
+    <button class="photo-lightbox-nav photo-lightbox-prev" type="button" aria-label="Previous photo">&#10094;</button>
     <button class="photo-lightbox-close" type="button" aria-label="Close image viewer">&times;</button>
     <img src="" alt="Expanded photo" id="photo-lightbox-image"/>
+    <button class="photo-lightbox-nav photo-lightbox-next" type="button" aria-label="Next photo">&#10095;</button>
 </div>
 
 Connect and say hi on [LinkedIn](https://www.linkedin.com/in/amoolya-srinivasa) or reach out via [Email](mailto:srinivasa.a@northeastern.edu)
