@@ -1,15 +1,41 @@
 ---
-# Only the main Sass file needs front matter
 search: false
 ---
 
 @charset "utf-8";
 
-@import "minimal-mistakes/skins/air";
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap");
+@import "minimal-mistakes/skins/default";
 @import "minimal-mistakes";
 
+html,
+body {
+  font-family: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.page__title {
+  font-family: "Source Serif 4", Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+.masthead {
+  border-bottom: 1px solid #e5e7eb;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: saturate(120%) blur(4px);
+}
+
 .page__hero--overlay {
-  min-height: 42vh;
+  min-height: 36vh;
+}
+
+.page__content {
+  font-size: 1.03rem;
 }
 
 .science-strip {
@@ -23,5 +49,28 @@ search: false
   width: 100%;
   height: 180px;
   object-fit: cover;
+  border-radius: 12px;
+}
+
+.quick-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.quick-links a {
+  display: block;
+  text-decoration: none;
+  border: 1px solid #e5e7eb;
   border-radius: 10px;
+  padding: 0.8rem 1rem;
+  font-weight: 700;
+  color: #0b132b;
+  background: #ffffff;
+}
+
+.quick-links a:hover {
+  border-color: #94a3b8;
+  transform: translateY(-1px);
 }

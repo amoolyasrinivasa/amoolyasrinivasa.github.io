@@ -4,10 +4,6 @@ layout: single
 permalink: /cv/
 author_profile: true
 classes: wide
-header:
-  overlay_color: "#0a2239"
-  overlay_filter: 0.5
-  overlay_image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1800&q=80"
 ---
 ## Amoolya Srinivasa
 <!---[srinivasa.a@northeastern.edu](mailto:srinivasa.@northeastern.edu) --->

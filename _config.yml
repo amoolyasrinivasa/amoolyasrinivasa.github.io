@@ -15,7 +15,6 @@ plugins:
   - jekyll-include-cache
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-paginate
 
 markdown: kramdown
 highlighter: rouge
@@ -23,7 +22,8 @@ permalink: /:title/
 picture: "assets/images/Amoolya.jpg"
 
 search: true
-breadcrumbs: true
+minimal_mistakes_skin: "default"
+breadcrumbs: false
 read_time: true
 words_per_minute: 200
 comments:

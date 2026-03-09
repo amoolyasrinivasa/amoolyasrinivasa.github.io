@@ -3,10 +3,6 @@ title: Publications
 layout: single
 permalink: /publications/
 author_profile: true
-header:
-  overlay_color: "#14213d"
-  overlay_filter: 0.5
-  overlay_image: "https://images.unsplash.com/photo-1530026186672-2cd00ffc50fe?auto=format&fit=crop&w=1800&q=80"
 ---
 
 # Publications
