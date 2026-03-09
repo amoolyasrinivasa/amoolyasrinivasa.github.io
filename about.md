@@ -7,9 +7,10 @@ classes: wide
 ---
 
 
-<img src="{{ site.url }}/{{ site.picture }}" style="width:300px;"/>
-
-![greeting gif](https://github.com/alansmathew/alansmathew/raw/master/lang.gif)
+<div class="about-media">
+  <img src="{{ site.url }}/{{ site.picture }}" alt="Amoolya Srinivasa" class="about-profile-photo"/>
+  <img src="https://github.com/alansmathew/alansmathew/raw/master/lang.gif" alt="Greeting animation" class="about-gif"/>
+</div>
 
 ---**Preface**
 
@@ -30,7 +31,7 @@ During my leisure hours, I enjoy indulging in various creative pursuits, such as
 
 ---**Photo Frolics**
 
-<div class="photo-frolics-grid">
+<div class="photo-frolics-scroll">
     <img src="{{site.url}}/assets/images/bbq.jpg" style="border:none; width:auto; max-height:200px;" />
      <img src="{{site.url}}/assets/images/grad.jpg" style="border:none; width:auto; max-height:200px;" />
     <img src="{{site.url}}/assets/images/bowl.jpg" style="border:none; width:auto; max-height:200px;" />

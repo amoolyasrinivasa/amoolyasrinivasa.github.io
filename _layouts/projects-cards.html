@@ -1,87 +1,36 @@
 ---
-layout: compress
+layout: default
 ---
-<!DOCTYPE html>
-<html lang="en" class="no-js">
-<head>
-  <meta charset="UTF-8"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-  <meta name="description" content="{{ site.description }}"/>
-  <meta name="keywords" content="{{ site.keywords }}"/>
-  <meta name="author" content="{{ site.author }}"/>
-  <link rel="stylesheet" href="{{ '/css/normalize.css' | relative_url }}"/>
-  <link rel="stylesheet" href="{{ '/fonts/font-awesome/css/font-awesome.css' | relative_url }}"/>
-  <link rel="stylesheet" href="{{ '/css/modern-blog.css' | relative_url }}"/>
-  <style>
-    .site-nav { text-align:center; margin-top:.8rem; }
-    .site-nav a { color:#fff; margin:0 .5rem; text-decoration:none; opacity:.9; }
-    .site-nav a:hover { opacity:1; text-decoration:underline; }
-    .card__subtitle { max-width: 90%; }
-  </style>
-</head>
-<body class="body">
-<div class="container">
-  <header class="header">
-    <h1>{{ page.title }}<span>All project posts in one section</span></h1>
-    <nav class="links">
-      <a href="{{ '/' | relative_url }}"><i class="fa fa-home fa-2x"></i></a>
-      <a href="{{ '/about/' | relative_url }}"><i class="fa fa-user fa-2x"></i></a>
-      <a href="{{ '/cv/' | relative_url }}"><i class="fa fa-file-text fa-2x"></i></a>
-      <a href="{{ '/publications/' | relative_url }}"><i class="fa fa-book fa-2x"></i></a>
-    </nav>
-    <div class="site-nav">
-      <a href="{{ '/' | relative_url }}">Home</a>
-      <a href="{{ '/about/' | relative_url }}">About</a>
-      <a href="{{ '/cv/' | relative_url }}">CV</a>
-      <a href="{{ '/projects/' | relative_url }}">Projects</a>
-      <a href="{{ '/publications/' | relative_url }}">Publications</a>
-      <a href="{{ '/tags/' | relative_url }}">Tags</a>
-    </div>
-  </header>
-  <div class="content">
-    <div class="pattern pattern--hidden"></div>
-    <div class="wrapper">
-      {% assign project_posts = site.posts | where: 'projects', true %}
-      {% for post in project_posts %}
-      {% if post.title and post.hidden != true %}
-      {% assign card_id = post.id | slugify %}
-      {% assign card_image = post.image | default: '/assets/images/sarscov2/targets.png' %}
-      {% assign subtitle = post.subtitle | default: post.description | default: 'Click to open full details' %}
-      <div class="card" data-id="{{ card_id }}">
-        <div class="card__container card__container--closed">
-          <svg class="card__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1200" preserveAspectRatio="xMidYMid slice">
-            <defs><clipPath id="{{ card_id }}-clip-path"><polygon class="clip" points="0,1200 0,0 1920,0 1920,1200"></polygon></clipPath></defs>
-            <image clip-path="url(#{{ card_id }}-clip-path)" width="1920" height="1200" xlink:href="{{ card_image | relative_url }}"></image>
-          </svg>
-          <div class="card__content">
-            <i class="card__btn-close fa fa-times"></i>
-            <div class="card__caption">
-              <h2 class="card__title">{{ post.title }}</h2>
-              <p class="card__subtitle">{{ subtitle }}</p>
-            </div>
-            <div class="card__copy">
-              <div class="meta">
-                <img class="meta__avatar" src="{{ site.picture | relative_url }}" alt="avatar"/>
-                <span class="meta__author">{{ site.author }}</span>
-                <span class="meta__date">{{ post.date | date: "%Y-%m-%d" }}</span>
-              </div>
-              {{ post.content }}
-            </div>
-          </div>
-        </div>
-      </div>
-      {% endif %}
-      {% endfor %}
-    </div>
-  </div>
+
+{% assign project_posts = site.posts | where: 'projects', true %}
+
+<h1>{{ page.title }}</h1>
+<p class="section-subtitle">Selected project writeups across bioinformatics, computational biology, and machine learning.</p>
+
+<div class="project-grid">
+  {% for post in project_posts %}
+  {% if post.title and post.hidden != true %}
+  {% assign card_image = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Colored_neural_network.svg/640px-Colored_neural_network.svg.png" %}
+  {% if post.title contains "SARS CoV-2" %}
+    {% assign card_image = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/SARS-CoV-2_without_background.png/640px-SARS-CoV-2_without_background.png" %}
+  {% elsif post.title contains "Ascorbic Acid" %}
+    {% assign card_image = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/DNA_orbit_animated.gif/640px-DNA_orbit_animated.gif" %}
+  {% elsif post.title contains "Chemical Dependence" %}
+    {% assign card_image = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Artificial_neural_network.svg/640px-Artificial_neural_network.svg.png" %}
+  {% elsif post.title contains "Cervical Cancer" %}
+    {% assign card_image = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/DNA_replication_split_horizontal.svg/640px-DNA_replication_split_horizontal.svg.png" %}
+  {% elsif post.title contains "downloadable quality of photographs" %}
+    {% assign card_image = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Deep_Learning.jpg/640px-Deep_Learning.jpg" %}
+  {% elsif post.title contains "GPVI" %}
+    {% assign card_image = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Protein_hemoglobin.png/640px-Protein_hemoglobin.png" %}
+  {% endif %}
+
+  <article class="project-card">
+    <img src="{{ card_image }}" alt="Scientific illustration for {{ post.title }}" class="project-thumb" />
+    <h3><a href="{{ post.url | relative_url }}" class="project-card-link">{{ post.title }}</a></h3>
+    <p class="project-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
+    {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+  </article>
+  {% endif %}
+  {% endfor %}
 </div>
-<script src="{{ '/js/vendors/trianglify.min.js' | relative_url }}"></script>
-<script src="{{ '/js/vendors/TweenMax.min.js' | relative_url }}"></script>
-<script src="{{ '/js/vendors/ScrollToPlugin.min.js' | relative_url }}"></script>
-<script src="{{ '/js/vendors/cash.min.js' | relative_url }}"></script>
-<script src="{{ '/js/card-modern-blog.js' | relative_url }}"></script>
-<script src="{{ '/js/modern-blog.js' | relative_url }}"></script>
-</body>
-</html>

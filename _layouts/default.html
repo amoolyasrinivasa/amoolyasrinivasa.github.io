@@ -15,17 +15,7 @@ layout: compress
   <link rel="stylesheet" href="{{ '/css/normalize.css' | relative_url }}"/>
   <link rel="stylesheet" href="{{ '/fonts/font-awesome/css/font-awesome.css' | relative_url }}"/>
   <link rel="stylesheet" href="{{ '/css/modern-blog.css' | relative_url }}"/>
-  <style>
-    .site-nav { text-align: center; margin: 0.8rem 0 0; }
-    .site-nav a { display: inline-block; margin: 0 .5rem; font-size: .95rem; color: #fff; opacity:.9; text-decoration:none; }
-    .site-nav a:hover { opacity: 1; text-decoration: underline; }
-    .page-shell { max-width: 980px; margin: 0 auto; padding: 2rem 1rem 3rem; background: rgba(255,255,255,.93); border-radius: 10px; }
-    .page-shell h1, .page-shell h2, .page-shell h3 { color:#102027; }
-    .photo-frolics-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(140px,1fr)); gap:.7rem; }
-    .photo-frolics-grid img { width:100%; height:120px; object-fit:cover; border-radius:8px; }
-    .quick-links { display:flex; flex-wrap:wrap; gap:.6rem; margin:1rem 0; }
-    .quick-links a { padding:.45rem .8rem; border-radius:999px; background:#e0f2f1; color:#004d40; text-decoration:none; font-weight:600; }
-  </style>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}"/>
 </head>
 <body class="body">
 <div class="container">
@@ -57,5 +47,20 @@ layout: compress
 </div>
 <script src="{{ '/js/vendors/trianglify.min.js' | relative_url }}"></script>
 <script src="{{ '/js/modern-blog.js' | relative_url }}"></script>
+<script>
+  (function () {
+    var selectors = ".quick-links a, .site-nav a, .links a, .project-card-link";
+    document.addEventListener("click", function (event) {
+      var el = event.target.closest(selectors);
+      if (!el) return;
+      el.classList.remove("click-pop");
+      void el.offsetWidth;
+      el.classList.add("click-pop");
+      setTimeout(function () {
+        el.classList.remove("click-pop");
+      }, 320);
+    });
+  })();
+</script>
 </body>
 </html>
