@@ -217,7 +217,7 @@ h6,
 
 .dna-footer-banner {
   width: 100vw;
-  height: 120px;
+  height: 220px;
   margin-top: 1.2rem;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
@@ -227,11 +227,12 @@ h6,
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  opacity: 0.6;
 }
 
 @media (max-width: 768px) {
   .dna-footer-banner {
-    height: 92px;
+    height: 150px;
   }
 }
 
