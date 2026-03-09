@@ -9,7 +9,9 @@ search: false
 :root {
   --bg-soft: #f7fafc;
   --line-soft: #dbe4ee;
-  --text-strong: #0f172a;
+  --text-strong: #1f2937;
+  --text-body: #334155;
+  --text-muted: #475569;
   --brand: #0f766e;
   --link: #0b5ed7;
   --link-hover: #084298;
@@ -24,7 +26,7 @@ body {
 }
 
 p, li, span, small, div, a {
-  color: #0b1220;
+  color: var(--text-body);
   font-weight: 400 !important;
 }
 
@@ -50,6 +52,10 @@ h6,
   font-family: "Space Grotesk", "IBM Plex Sans", sans-serif;
   letter-spacing: -0.01em;
   font-weight: 700 !important;
+  background: linear-gradient(90deg, #111827 0%, #374151 45%, #334155 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
 }
 
 .masthead {
@@ -175,7 +181,7 @@ h6,
 }
 
 .project-meta {
-  color: #475569;
+  color: var(--text-muted);
   font-size: 0.9rem;
 }
 
@@ -191,7 +197,7 @@ h6,
   max-width: 1040px;
   margin: 0 auto;
   padding: 2rem 1rem 3rem;
-  background: rgba(255, 255, 255, 0.995);
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
   border-radius: 10px;
   animation: riseIn 0.55s ease both;
 }
@@ -199,7 +205,7 @@ h6,
 .page-shell h1,
 .page-shell h2,
 .page-shell h3 {
-  color: #102027;
+  color: transparent !important;
 }
 
 .page-shell > * {
@@ -219,30 +225,30 @@ h6,
   display: inline-block;
   margin: 0 0.5rem;
   font-size: 0.95rem;
-  color: #0f172a !important;
+  color: #1f2937 !important;
   opacity: 1;
   text-decoration: none;
   font-weight: 600 !important;
 }
 
 .site-nav a:hover {
-  color: #0b1220;
+  color: #111827;
   text-decoration: underline;
 }
 
 .links a {
-  color: #0f172a !important;
+  color: #1f2937 !important;
   font-weight: 600 !important;
   text-decoration: none !important;
 }
 
 .header h1 {
-  color: #0f172a !important;
+  color: transparent !important;
   font-weight: 700 !important;
 }
 
 .header h1 span {
-  color: #334155;
+  color: var(--text-muted);
   font-weight: 400;
 }
 
@@ -313,7 +319,7 @@ h6,
 .section-subtitle {
   margin-top: -0.35rem;
   margin-bottom: 1rem;
-  color: #334155;
+  color: var(--text-muted);
 }
 
 .tag-chip-grid {
