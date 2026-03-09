@@ -10,7 +10,7 @@ highlighter: rouge
 permalink: /:title/
 
 name: "Amoolya Srinivasa"
-picture: "assets/images/Amoolya.jpg"
+picture: "assets/images/Amoolya.JPG"
 
 exclude:
   - README.md
