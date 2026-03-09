@@ -113,21 +113,6 @@ h6,
   animation: clickWave 0.32s ease-out;
 }
 
-.bio-visual-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 0.9rem;
-  margin-top: 1.3rem;
-}
-
-.bio-visual-grid img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 12px;
-  border: 1px solid var(--line-soft);
-}
-
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
