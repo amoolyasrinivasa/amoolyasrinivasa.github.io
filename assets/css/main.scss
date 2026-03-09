@@ -19,7 +19,12 @@ html,
 body {
   font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
   color: var(--text-strong);
-  font-weight: 600;
+  font-weight: 700;
+}
+
+p, li {
+  color: #0b1220;
+  font-weight: 700;
 }
 
 a {
@@ -185,7 +190,7 @@ h6,
   max-width: 1040px;
   margin: 0 auto;
   padding: 2rem 1rem 3rem;
-  background: rgba(255, 255, 255, 0.985);
+  background: rgba(255, 255, 255, 0.995);
   border-radius: 10px;
   animation: riseIn 0.55s ease both;
 }
@@ -225,6 +230,11 @@ h6,
 
 .links a {
   color: #e2e8f0;
+}
+
+.pattern {
+  opacity: 0.12 !important;
+  filter: saturate(45%) brightness(135%);
 }
 
 .home-intro {

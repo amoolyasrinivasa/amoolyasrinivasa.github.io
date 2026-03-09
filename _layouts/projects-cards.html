@@ -10,23 +10,23 @@ layout: default
 <div class="project-grid">
   {% for post in project_posts %}
   {% if post.title and post.hidden != true %}
-  {% assign card_image = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Artificial_neural_network.svg/512px-Artificial_neural_network.svg.png" %}
+  {% assign card_image = '/assets/images/sarscov2/targets.png' %}
   {% if post.title contains "SARS CoV-2" %}
-    {% assign card_image = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/SARS-CoV-2_without_background.png/512px-SARS-CoV-2_without_background.png" %}
+    {% assign card_image = '/assets/images/sarscov2/targets.png' %}
   {% elsif post.title contains "Ascorbic Acid" %}
-    {% assign card_image = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/DNA_Overview2.png/512px-DNA_Overview2.png" %}
+    {% assign card_image = '/assets/images/bioenzyme/bioenzyme.png' %}
   {% elsif post.title contains "Chemical Dependence" %}
-    {% assign card_image = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Bar_chart_icon.svg/512px-Bar_chart_icon.svg.png" %}
+    {% assign card_image = '/assets/images/chemicaldependence_ML/chemdep.png' %}
   {% elsif post.title contains "Cervical Cancer" %}
-    {% assign card_image = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Artificial_neural_network.svg/512px-Artificial_neural_network.svg.png" %}
+    {% assign card_image = '/assets/images/cervicalcancer_ML/ccml_corplot.png' %}
   {% elsif post.title contains "downloadable quality of photographs" %}
-    {% assign card_image = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Camera_icon.svg/512px-Camera_icon.svg.png" %}
+    {% assign card_image = '/assets/images/photo3.jpg' %}
   {% elsif post.title contains "GPVI" %}
-    {% assign card_image = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Protein_hemoglobin.png/512px-Protein_hemoglobin.png" %}
+    {% assign card_image = '/assets/images/GPVI/gpvi.png' %}
   {% endif %}
 
   <article class="project-card">
-    <img src="{{ card_image }}" alt="Scientific illustration for {{ post.title }}" class="project-thumb" />
+    <img src="{{ card_image | relative_url }}" alt="Scientific illustration for {{ post.title }}" class="project-thumb" />
     <h3><a href="{{ post.url | relative_url }}" class="project-card-link">{{ post.title }}</a></h3>
     <p class="project-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
     {% if post.description %}<p>{{ post.description }}</p>{% endif %}
