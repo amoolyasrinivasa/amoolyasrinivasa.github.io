@@ -34,9 +34,11 @@ During my leisure hours, I enjoy indulging in various creative pursuits, such as
 <div class="photo-frolics-scroll">
     <img src="{{site.url}}/assets/images/photo16.jpg" style="border:none; width:auto; max-height:200px;" />
     <img src="{{site.url}}/assets/images/photo14.jpg" style="border:none; width:auto; max-height:200px;" />
+    <img src="{{site.url}}/assets/images/photo10.jpeg" style="border:none; width:auto; max-height:200px;" />
     <img src="{{site.url}}/assets/images/photo15.jpeg" style="border:none; width:auto; max-height:200px;" />
     <img src="{{site.url}}/assets/images/grad.jpg" style="border:none; width:auto; max-height:200px;" />
     <img src="{{site.url}}/assets/images/fog2.jpg" style="border:none; width:auto; max-height:200px;" />
+    <img src="{{site.url}}/assets/images/photo12.jpg" style="border:none; width:auto; max-height:200px;" />
     <img src="{{site.url}}/assets/images/nextrna.jpeg" style="border:none; width:auto; max-height:200px;" />
     <img src="{{site.url}}/assets/images/photo1.jpg" style="border:none; width:auto; max-height:200px;" />
     <img src="{{site.url}}/assets/images/photo2.jpeg" style="border:none; width:auto; max-height:200px;" />
@@ -47,9 +49,7 @@ During my leisure hours, I enjoy indulging in various creative pursuits, such as
     <img src="{{site.url}}/assets/images/photo7.jpg" style="border:none; width:auto; max-height:200px;" />
     <img src="{{site.url}}/assets/images/photo8.jpg" style="border:none; width:auto; max-height:200px;" />
     <img src="{{site.url}}/assets/images/photo9.JPG" style="border:none; width:auto; max-height:200px;" />
-    <img src="{{site.url}}/assets/images/photo10.jpeg" style="border:none; width:auto; max-height:200px;" />
     <img src="{{site.url}}/assets/images/photo11.jpg" style="border:none; width:auto; max-height:200px;" />
-    <img src="{{site.url}}/assets/images/photo12.jpg" style="border:none; width:auto; max-height:200px;" />
     <img src="{{site.url}}/assets/images/photo13.JPG" style="border:none; width:auto; max-height:200px;" />
     <img src="{{site.url}}/assets/images/evronylab.jpg" style="border:none; width:auto; max-height:200px;" />
     <img src="{{site.url}}/assets/images/bbq.jpg" style="border:none; width:auto; max-height:200px;" />
