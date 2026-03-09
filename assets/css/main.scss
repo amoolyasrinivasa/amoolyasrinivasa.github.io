@@ -13,6 +13,7 @@ search: false
   --text-body: #334155;
   --text-muted: #475569;
   --brand: #0f766e;
+  --maroon: #5a1622;
   --link: #0b5ed7;
   --link-hover: #084298;
 }
@@ -52,10 +53,7 @@ h6,
   font-family: "Space Grotesk", "IBM Plex Sans", sans-serif;
   letter-spacing: -0.01em;
   font-weight: 700 !important;
-  background: linear-gradient(90deg, #111827 0%, #374151 45%, #334155 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent !important;
+  color: var(--maroon) !important;
 }
 
 .masthead {
@@ -106,7 +104,7 @@ h6,
   padding: 0.8rem 1rem;
   text-decoration: none;
   font-weight: 500 !important;
-  color: #0b132b;
+  color: var(--maroon);
   background: #fff;
 }
 
@@ -205,7 +203,7 @@ h6,
 .page-shell h1,
 .page-shell h2,
 .page-shell h3 {
-  color: transparent !important;
+  color: var(--maroon) !important;
 }
 
 .page-shell > * {
@@ -243,7 +241,7 @@ h6,
 }
 
 .header h1 {
-  color: transparent !important;
+  color: var(--maroon) !important;
   font-weight: 700 !important;
 }
 
@@ -338,7 +336,7 @@ h6,
   padding: 0.45rem 0.8rem;
   text-decoration: none;
   background: #eef7ff;
-  color: #0b5ed7;
+  color: var(--maroon);
   font-weight: 400;
 }
 
