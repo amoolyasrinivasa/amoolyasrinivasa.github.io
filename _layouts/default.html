@@ -15,7 +15,7 @@ layout: compress
   <link rel="stylesheet" href="{{ '/css/normalize.css' | relative_url }}"/>
   <link rel="stylesheet" href="{{ '/fonts/font-awesome/css/font-awesome.css' | relative_url }}"/>
   <link rel="stylesheet" href="{{ '/css/modern-blog.css' | relative_url }}"/>
-  <link rel="stylesheet" href="{{ '/assets/css/main.css?v=20260309q' | relative_url }}"/>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css?v=20260309r' | relative_url }}"/>
 </head>
 <body class="body">
 <div class="container">
@@ -96,7 +96,7 @@ layout: compress
 
     function resolvePhotoSrc(photoEl) {
       if (!photoEl) return "";
-      return photoEl.getAttribute("src") || photoEl.currentSrc || photoEl.src || "";
+      return photoEl.getAttribute("data-full") || photoEl.getAttribute("src") || photoEl.currentSrc || photoEl.src || "";
     }
 
     function showPhoto(index) {
@@ -108,6 +108,13 @@ layout: compress
       modalImage.src = src;
       modalImage.alt = active.alt || "Expanded photo";
     }
+
+    modalImage.addEventListener("error", function () {
+      var active = photos[currentIndex];
+      if (!active) return;
+      var fallback = active.getAttribute("src") || active.currentSrc || active.src || "";
+      if (fallback && modalImage.src !== fallback) modalImage.src = fallback;
+    });
 
     scrollEl.addEventListener("click", function (event) {
       var img = event.target.closest(".frolics-photo");
