@@ -12,23 +12,23 @@ layout: default
   {% assign title_lower = post.title | downcase %}
   {% if post.title and post.hidden != true %}
   {% unless title_lower contains "prediction of downloadable quality of photographs" or title_lower contains "gpv1" %}
-  {% assign card_image = '/assets/images/sarscov2/targets.png' %}
+  {% assign card_image = 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Artificial_neural_network.svg/1024px-Artificial_neural_network.svg.png' %}
   {% if post.title contains "SARS CoV-2" %}
-    {% assign card_image = '/assets/images/sarscov2/targets.png' %}
+    {% assign card_image = 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/SARS-CoV-2_without_background.png/1024px-SARS-CoV-2_without_background.png' %}
   {% elsif post.title contains "Ascorbic Acid" %}
-    {% assign card_image = '/assets/images/bioenzyme/bioenzyme.png' %}
+    {% assign card_image = 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/DNA_Overview2.png/1024px-DNA_Overview2.png' %}
   {% elsif post.title contains "Chemical Dependence" %}
-    {% assign card_image = '/assets/images/chemicaldependence_ML/chemdep.png' %}
+    {% assign card_image = 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Histogram_and_density_plot.svg/1024px-Histogram_and_density_plot.svg.png' %}
   {% elsif post.title contains "Cervical Cancer" %}
-    {% assign card_image = '/assets/images/cervicalcancer_ML/ccml_corplot.png' %}
+    {% assign card_image = 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/DNA_replication_split_horizontal.svg/1024px-DNA_replication_split_horizontal.svg.png' %}
   {% elsif post.title contains "downloadable quality of photographs" %}
-    {% assign card_image = '/assets/images/photo3.jpg' %}
+    {% assign card_image = 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Camera_icon.svg/1024px-Camera_icon.svg.png' %}
   {% elsif post.title contains "GPVI" %}
-    {% assign card_image = '/assets/images/GPVI/gpvi.png' %}
+    {% assign card_image = 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Protein_hemoglobin.png/1024px-Protein_hemoglobin.png' %}
   {% endif %}
 
   <article class="project-card">
-    <img src="{{ card_image | relative_url }}" alt="Scientific illustration for {{ post.title }}" class="project-thumb" />
+    <img src="{{ card_image }}" alt="Scientific abstract for {{ post.title }}" class="project-thumb" onerror="this.onerror=null;this.src='{{ '/assets/images/sarscov2/targets.png' | relative_url }}';" />
     <h3><a href="{{ post.url | relative_url }}" class="project-card-link">{{ post.title }}</a></h3>
     <p class="project-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
     {% if post.description %}<p>{{ post.description }}</p>{% endif %}
