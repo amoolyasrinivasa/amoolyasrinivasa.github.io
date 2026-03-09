@@ -36,12 +36,14 @@ During my leisure hours, I enjoy indulging in various creative pursuits, such as
     <div class="photo-frolics-scroll" id="photo-frolics-scroll">
         <img src="{{site.url}}/assets/images/photo16.jpg" alt="Photo frolic 16" class="frolics-photo"/>
         <img src="{{site.url}}/assets/images/photo14.jpg" alt="Photo frolic 14" class="frolics-photo"/>
-        <img src="{{site.url}}/assets/images/photo15.jpg" alt="Photo frolic 15" class="frolics-photo"/>
+        <img src="{{site.url}}/assets/images/photo10.jpeg" alt="Photo frolic 10" class="frolics-photo"/>
+        <img src="{{site.url}}/assets/images/photo15.jpeg" alt="Photo frolic 15" class="frolics-photo"/>
         <img src="{{site.url}}/assets/images/grad.jpg" alt="Graduation moment" class="frolics-photo"/>
         <img src="{{site.url}}/assets/images/fog2.jpg" alt="Fog scene" class="frolics-photo"/>
+        <img src="{{site.url}}/assets/images/photo12.jpg" alt="Photo frolic 12" class="frolics-photo"/>
         <img src="{{site.url}}/assets/images/nextrna.jpeg" alt="NextRNA memory" class="frolics-photo"/>
         <img src="{{site.url}}/assets/images/photo1.jpg" alt="Photo frolic 1" class="frolics-photo"/>
-        <img src="{{site.url}}/assets/images/photo2.jpg" alt="Photo frolic 2" class="frolics-photo"/>
+        <img src="{{site.url}}/assets/images/photo2.jpeg" alt="Photo frolic 2" class="frolics-photo"/>
         <img src="{{site.url}}/assets/images/photo3.jpg" alt="Photo frolic 3" class="frolics-photo"/>
         <img src="{{site.url}}/assets/images/photo4.jpg" alt="Photo frolic 4" class="frolics-photo"/>
         <img src="{{site.url}}/assets/images/photo5.jpg" alt="Photo frolic 5" class="frolics-photo"/>
@@ -49,13 +51,9 @@ During my leisure hours, I enjoy indulging in various creative pursuits, such as
         <img src="{{site.url}}/assets/images/photo7.jpg" alt="Photo frolic 7" class="frolics-photo"/>
         <img src="{{site.url}}/assets/images/photo8.jpg" alt="Photo frolic 8" class="frolics-photo"/>
         <img src="{{site.url}}/assets/images/photo9.JPG" alt="Photo frolic 9" class="frolics-photo"/>
-        <img src="{{site.url}}/assets/images/photo10.jpg" alt="Photo frolic 10" class="frolics-photo"/>
         <img src="{{site.url}}/assets/images/photo11.jpg" alt="Photo frolic 11" class="frolics-photo"/>
-        <img src="{{site.url}}/assets/images/photo12.JPG" alt="Photo frolic 12" class="frolics-photo"/>
         <img src="{{site.url}}/assets/images/photo13.JPG" alt="Photo frolic 13" class="frolics-photo"/>
         <img src="{{site.url}}/assets/images/evronylab.jpg" alt="Evrony Lab memory" class="frolics-photo"/>
-        <img src="{{site.url}}/assets/images/photo14.jpg" alt="Photo frolic 14 duplicate" class="frolics-photo"/>
-        <img src="{{site.url}}/assets/images/photo15.jpg" alt="Photo frolic 15 duplicate" class="frolics-photo"/>
         <img src="{{site.url}}/assets/images/bbq.jpg" alt="BBQ memory" class="frolics-photo"/>
     </div>
     <button class="frolics-nav frolics-nav-right" type="button" aria-label="Scroll photos right">&#10095;</button>
@@ -65,6 +63,5 @@ During my leisure hours, I enjoy indulging in various creative pursuits, such as
     <button class="photo-lightbox-close" type="button" aria-label="Close image viewer">&times;</button>
     <img src="" alt="Expanded photo" id="photo-lightbox-image"/>
 </div>
-
 
 Connect and say hi on [LinkedIn](https://www.linkedin.com/in/amoolya-srinivasa) or reach out via [Email](mailto:srinivasa.a@northeastern.edu)
