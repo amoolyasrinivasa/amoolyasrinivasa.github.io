@@ -48,13 +48,11 @@ During my leisure hours, I enjoy indulging in various creative pursuits, such as
         <img src="{{ '/assets/images/photo4.jpg' | relative_url }}" data-full="{{ '/assets/images/photo4.jpg' | relative_url }}" alt="Photo frolic 4" class="frolics-photo"/>
         <img src="{{ '/assets/images/photo5.jpg' | relative_url }}" data-full="{{ '/assets/images/photo5.jpg' | relative_url }}" alt="Photo frolic 5" class="frolics-photo"/>
         <img src="{{ '/assets/images/photo6.JPG' | relative_url }}" data-full="{{ '/assets/images/photo6.JPG' | relative_url }}" alt="Photo frolic 6" class="frolics-photo"/>
- 	#<img src="{{ '/assets/images/bbq.jpg' | relative_url }}" data-full="{{ '/assets/images/bbq.jpg' | relative_url }}" alt="BBQ memory" class="frolics-photo"/>        
 	<img src="{{ '/assets/images/photo7.jpg' | relative_url }}" data-full="{{ '/assets/images/photo7.jpg' | relative_url }}" alt="Photo frolic 7" class="frolics-photo"/>
         <img src="{{ '/assets/images/photo8.jpg' | relative_url }}" data-full="{{ '/assets/images/photo8.jpg' | relative_url }}" alt="Photo frolic 8" class="frolics-photo"/>
         <img src="{{ '/assets/images/photo9.JPG' | relative_url }}" data-full="{{ '/assets/images/photo9.JPG' | relative_url }}" alt="Photo frolic 9" class="frolics-photo"/>
         <img src="{{ '/assets/images/photo11.jpg' | relative_url }}" data-full="{{ '/assets/images/photo11.jpg' | relative_url }}" alt="Photo frolic 11" class="frolics-photo"/>
-        <img src="{{ '/assets/images/photo13.JPG' | relative_url }}" data-full="{{ '/assets/images/photo13.JPG' | relative_url }}" alt="Photo frolic 13" class="frolics-photo"/>
-        #<img src="{{ '/assets/images/evronylab.jpg' | relative_url }}" data-full="{{ '/assets/images/evronylab.jpg' | relative_url }}" alt="Evrony Lab memory" class="frolics-photo"/>
+        <img src="{{ '/assets/images/photo13.JPG' | relative_url }}" data-full="{{ '/assets/images/photo13.JPG' | relative_url }}" alt="Photo frolic 13" class="frolics-photo"/>   
     </div>
     <button class="frolics-nav frolics-nav-right" type="button" aria-label="Scroll photos right">&#10095;</button>
 </div>
