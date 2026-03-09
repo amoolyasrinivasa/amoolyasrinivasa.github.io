@@ -10,23 +10,10 @@ layout: default
 <div class="project-grid">
   {% for post in project_posts %}
   {% if post.title and post.hidden != true %}
-  {% assign card_image = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Colored_neural_network.svg/640px-Colored_neural_network.svg.png" %}
-  {% if post.title contains "SARS CoV-2" %}
-    {% assign card_image = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/SARS-CoV-2_without_background.png/640px-SARS-CoV-2_without_background.png" %}
-  {% elsif post.title contains "Ascorbic Acid" %}
-    {% assign card_image = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/DNA_orbit_animated.gif/640px-DNA_orbit_animated.gif" %}
-  {% elsif post.title contains "Chemical Dependence" %}
-    {% assign card_image = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Artificial_neural_network.svg/640px-Artificial_neural_network.svg.png" %}
-  {% elsif post.title contains "Cervical Cancer" %}
-    {% assign card_image = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/DNA_replication_split_horizontal.svg/640px-DNA_replication_split_horizontal.svg.png" %}
-  {% elsif post.title contains "downloadable quality of photographs" %}
-    {% assign card_image = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Deep_Learning.jpg/640px-Deep_Learning.jpg" %}
-  {% elsif post.title contains "GPVI" %}
-    {% assign card_image = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Protein_hemoglobin.png/640px-Protein_hemoglobin.png" %}
-  {% endif %}
+  {% assign card_image = post.image | default: '/assets/images/sarscov2/targets.png' %}
 
   <article class="project-card">
-    <img src="{{ card_image }}" alt="Scientific illustration for {{ post.title }}" class="project-thumb" />
+    <img src="{{ card_image | relative_url }}" alt="Scientific illustration for {{ post.title }}" class="project-thumb" />
     <h3><a href="{{ post.url | relative_url }}" class="project-card-link">{{ post.title }}</a></h3>
     <p class="project-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
     {% if post.description %}<p>{{ post.description }}</p>{% endif %}
