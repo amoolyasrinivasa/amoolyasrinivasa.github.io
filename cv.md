@@ -6,9 +6,11 @@ author_profile: true
 classes: wide
 ---
 
+<section class="cv-dna" markdown="1">
+
 ## Amoolya Srinivasa
 <!---[srinivasa.a@northeastern.edu](mailto:srinivasa.@northeastern.edu) --->
-Boston, MA
+New York, NY
 ## Preface
 It is possible that my fascination for science began from my first glance through the microscope at Paramecium back in the biology lab at school. Since then I have shown a predilection to learn about the world imperceptible by human eyes. As I got older I was intrigued by the interrelation of biology with computation, mathematics and technology, which led me to be inspired by the vast field of bioinformatics that perfectly amalgamates two of my most passionate fields - computer science and biology. My aim is fueled by a conviction to make a dent, if not a difference, in the field of medical drug designing, machine learning in bioinformatics, stem cell and cancer therapeutics. 
 
@@ -77,3 +79,5 @@ In this five-part online course, I explored the promise that stem cells hold for
 
 **[Genomic Data Science: Offered by Johns Hopkins University on Coursera, Nov 2019](https://www.coursera.org/specializations/genomic-data-science)**<br>
 Through this course, I was able to gain insights about how genomics is revolutionizing medical discoveries and that it's neccessity in understanding the genome and leverage the data and information from genomic datasets. The course covered the concepts and tools to understand, analyze, and interpret data from next-generation sequencing experiments. Through this course, I learned about the most common tools used in genomic data science, including the use of the command line, along with a variety of software implementation tools like Python, R, and Bioconductor. The course was designed to serve as both a standalone introduction to genomic data science or as a perfect complement to a primary degree or postdoc in biology, molecular biology, or genetics. As a scientist in these fields, seeking to gain familiarity in data science and statistical tools to better interact with the data in my everyday work, I found this course to be highly valuable.
+
+</section>
