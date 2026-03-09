@@ -12,10 +12,10 @@ search: false
   --text-strong: #1f2937;
   --text-body: #334155;
   --text-muted: #475569;
-  --brand: #0f766e;
-  --maroon: #5a1622;
-  --link: #0b5ed7;
-  --link-hover: #084298;
+  --brand: #2e8b57;
+  --sea-green: #2e8b57;
+  --link: #2e8b57;
+  --link-hover: #236b43;
 }
 
 html,
@@ -53,7 +53,7 @@ h6,
   font-family: "Space Grotesk", "IBM Plex Sans", sans-serif;
   letter-spacing: -0.01em;
   font-weight: 700 !important;
-  color: var(--maroon) !important;
+  color: var(--sea-green) !important;
 }
 
 .masthead {
@@ -104,7 +104,7 @@ h6,
   padding: 0.8rem 1rem;
   text-decoration: none;
   font-weight: 500 !important;
-  color: var(--maroon) !important;
+  color: var(--sea-green) !important;
   background: #fff;
   text-decoration: none !important;
 }
@@ -204,7 +204,7 @@ h6,
 .page-shell h1,
 .page-shell h2,
 .page-shell h3 {
-  color: var(--maroon) !important;
+  color: var(--sea-green) !important;
 }
 
 .page-shell > * {
@@ -224,25 +224,29 @@ h6,
   display: inline-block;
   margin: 0 0.5rem;
   font-size: 0.95rem;
-  color: #1f2937 !important;
+  color: var(--sea-green) !important;
   opacity: 1;
   text-decoration: none;
   font-weight: 600 !important;
 }
 
 .site-nav a:hover {
-  color: #111827;
+  color: var(--link-hover);
   text-decoration: underline;
 }
 
 .links a {
-  color: #1f2937 !important;
+  color: var(--sea-green) !important;
   font-weight: 600 !important;
   text-decoration: none !important;
 }
 
+.project-card-link {
+  color: var(--sea-green) !important;
+}
+
 .header h1 {
-  color: var(--maroon) !important;
+  color: var(--sea-green) !important;
   font-weight: 700 !important;
 }
 
@@ -337,7 +341,7 @@ h6,
   padding: 0.45rem 0.8rem;
   text-decoration: none;
   background: #eef7ff;
-  color: var(--maroon) !important;
+  color: var(--sea-green) !important;
   font-weight: 400;
   text-decoration: none !important;
 }
