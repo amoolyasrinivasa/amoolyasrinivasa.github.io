@@ -1,0 +1,61 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}"/>
+  <meta name="keywords" content="{{ site.keywords }}"/>
+  <meta name="author" content="{{ site.author }}"/>
+  <link rel="shortcut icon" href="{{ '/assets/images/Amoolya.jpg' | relative_url }}"/>
+  <link rel="stylesheet" href="{{ '/css/normalize.css' | relative_url }}"/>
+  <link rel="stylesheet" href="{{ '/fonts/font-awesome/css/font-awesome.css' | relative_url }}"/>
+  <link rel="stylesheet" href="{{ '/css/modern-blog.css' | relative_url }}"/>
+  <style>
+    .site-nav { text-align: center; margin: 0.8rem 0 0; }
+    .site-nav a { display: inline-block; margin: 0 .5rem; font-size: .95rem; color: #fff; opacity:.9; text-decoration:none; }
+    .site-nav a:hover { opacity: 1; text-decoration: underline; }
+    .page-shell { max-width: 980px; margin: 0 auto; padding: 2rem 1rem 3rem; background: rgba(255,255,255,.93); border-radius: 10px; }
+    .page-shell h1, .page-shell h2, .page-shell h3 { color:#102027; }
+    .photo-frolics-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(140px,1fr)); gap:.7rem; }
+    .photo-frolics-grid img { width:100%; height:120px; object-fit:cover; border-radius:8px; }
+    .quick-links { display:flex; flex-wrap:wrap; gap:.6rem; margin:1rem 0; }
+    .quick-links a { padding:.45rem .8rem; border-radius:999px; background:#e0f2f1; color:#004d40; text-decoration:none; font-weight:600; }
+  </style>
+</head>
+<body class="body">
+<div class="container">
+  <header class="header">
+    <h1>{{ site.title }}<span>{{ site.description }}</span></h1>
+    <nav class="links">
+      <a href="{{ '/about/' | relative_url }}"><i class="fa fa-user fa-2x"></i></a>
+      <a href="{{ '/cv/' | relative_url }}"><i class="fa fa-file-text fa-2x"></i></a>
+      <a href="{{ '/projects/' | relative_url }}"><i class="fa fa-flask fa-2x"></i></a>
+      <a href="{{ '/publications/' | relative_url }}"><i class="fa fa-book fa-2x"></i></a>
+      <a href="{{ '/tags/' | relative_url }}"><i class="fa fa-tags fa-2x"></i></a>
+    </nav>
+    <div class="site-nav">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <a href="{{ '/about/' | relative_url }}">About</a>
+      <a href="{{ '/cv/' | relative_url }}">CV</a>
+      <a href="{{ '/projects/' | relative_url }}">Projects</a>
+      <a href="{{ '/publications/' | relative_url }}">Publications</a>
+      <a href="{{ '/tags/' | relative_url }}">Tags</a>
+    </div>
+  </header>
+
+  <div class="content">
+    <div class="pattern pattern--hidden"></div>
+    <div class="page-shell">
+      {{ content }}
+    </div>
+  </div>
+</div>
+<script src="{{ '/js/vendors/trianglify.min.js' | relative_url }}"></script>
+<script src="{{ '/js/modern-blog.js' | relative_url }}"></script>
+</body>
+</html>

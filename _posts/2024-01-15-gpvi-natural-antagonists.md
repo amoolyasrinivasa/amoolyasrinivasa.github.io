@@ -1,6 +1,6 @@
 ---
 title: "Identification of Natural GPVI Receptor Antagonists Using Molecular Docking and Molecular Dynamics"
-layout: single
+layout: post
 date: 2024-01-15
 tags:
 - Structural bioinformatics
@@ -10,6 +10,7 @@ tags:
 - GPVI
 projects: true
 description: "Computational screening of Citrus limon flavonoids as GPVI antagonists using docking, interaction profiling, and MD simulations"
+image: "/assets/images/GPVI/gpvi.png"
 ---
 
 Cardiovascular diseases are frequently associated with abnormal platelet aggregation leading to thrombus formation. Glycoprotein VI (GPVI) is a collagen receptor expressed on platelet membranes that plays a central role in collagen-induced platelet activation and thrombus formation. Targeting GPVI represents a promising therapeutic strategy for antithrombotic drug development because inhibiting this receptor may reduce thrombosis risk while minimizing bleeding complications associated with traditional antiplatelet drugs.

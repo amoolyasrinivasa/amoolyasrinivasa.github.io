@@ -1,6 +1,6 @@
 ---
 title: Publications
-layout: single
+layout: default
 permalink: /publications/
 author_profile: true
 ---

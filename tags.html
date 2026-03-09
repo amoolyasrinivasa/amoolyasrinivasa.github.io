@@ -1,6 +1,23 @@
 ---
-title: "Tags"
-layout: tags
+title: Tags
+layout: default
 permalink: /tags/
-author_profile: false
 ---
+
+{% assign sorted_tags = site.tags | sort %}
+
+<h2>Tags</h2>
+<p>
+{% for tag in sorted_tags %}
+  <a href="#{{ tag[0] | slugify }}">#{{ tag[0] }}</a>{% unless forloop.last %} · {% endunless %}
+{% endfor %}
+</p>
+
+{% for tag in sorted_tags %}
+  <h3 id="{{ tag[0] | slugify }}">#{{ tag[0] }}</h3>
+  <ul>
+    {% for post in tag[1] %}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> <small>({{ post.date | date: "%Y-%m-%d" }})</small></li>
+    {% endfor %}
+  </ul>
+{% endfor %}

@@ -1,7 +1,7 @@
 ---
 title: "Cervical Cancer Risk Factors Analysis with Machine Learning Models
 "
-layout: single
+layout: post
 date: 2020-12-11
 tags:
 - Cervical cancer risk factors dataset
@@ -15,6 +15,7 @@ tags:
 
 projects: true
 description: "Cervical Cancer Risk Factors Analysis with Machine Learning Models"
+image: "/assets/images/cervicalcancer_ML/ccml_corplot.png"
 ---
 
 **Boston, MA. 2022**
@@ -539,7 +540,6 @@ cat(metrics.ensembl)
 Here, I have built an ensemble function which combines all 3 models and gives a decision based on a combined majority voting system. This model improved the accuracy significantly to 93.4%. This is a significant improvement in model accuracy which shows that the error rate of the model has reduced considerably from almost 28% to around 4%.
 
 To conclude, after observing trends and completing the analysis of the model comparison, the ANN model did the best when compared to the Naive Bayes and Logistic regression models. Comparison of just the accuracy % is not a reliable criteria since we saw that although the accuracy of the Naive bayes model was the highest, the other metrics like precision, recall and F1 score was very poor for the model. The ANN model did well in all the metrics as well as accuracy. Hence, for this data and this approach, the ANN model seemed to be best fit model to predict cervical cancer based on the risk factors. The ensemble model further enhanced the prediction accuracy to 96.11% as well as the metrics to a really good level. Undersampling of data has an extremely negating effect and upsampling the data significantly helps in improving model performance. Accuracy alone is not entirely reliable to gauge the model performance. A lot of factors play a role in a models performance and allows us the compare different metrics to determine the best performing model with all factors considered. 
-
 
 
 

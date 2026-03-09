@@ -1,7 +1,7 @@
 ---
 title: "Production and Estimation of Ascorbic Acid in Biocatalytic Enzyme from Citrus Fruit Peels for Bioremediation of Heavy Metals in Agricultural Fields and in-silico docking, molcular modeling and mutational analysis
 "
-layout: single
+layout: post
 date: 2020-12-11
 tags:
 - Biocatalytic enzyme 
@@ -15,6 +15,7 @@ tags:
 
 projects: true
 description: "Biocatalytic enzyme for bioremediation of heavy metal contaminated soil"
+image: "/assets/images/bioenzyme/bioenzyme.png"
 ---
 
 **Dayananda Sagar College of Engineering, India. Summer 2021**
@@ -98,6 +99,5 @@ The study identified key residues involved in the interaction of Cr(VI) reductas
 ## Conclusion
 
 The study focused on using bioenzyme produced from citrus fruit peels, jaggery, water and baker's yeast for bioremediation of chromium in soil samples from agricultural fields. The study found that bioenzyme is a cost-effective and eco-friendly alternative to chemicals used in heavy metal degradation. The use of bioenzyme aids in better plant growth and productivity. The study also found that hexavalent chromium reductase found in chromium-resistant bacteria has the ability to catalyze the reduction of highly toxic Cr(VI) to less toxic Cr(III), offering a promising solution to chromium contamination. In silico site-directed mutagenesis indicated the importance of active site residues, which when mutated, brought about changes in the stability of the docked complex.
-
 
 

@@ -1,6 +1,6 @@
 ---
 title: Vitae
-layout: single
+layout: default
 permalink: /cv/
 author_profile: true
 classes: wide

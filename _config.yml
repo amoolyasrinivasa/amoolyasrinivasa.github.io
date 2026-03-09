@@ -1,83 +1,16 @@
-locale: en-US
 title: "Amoolya Srinivasa"
-title_separator: "|"
-subtitle: "Bioinformatics Programmer at NYU Langone Health"
-name: "Amoolya Srinivasa"
-description: "Bioinformatics, computational biology, and data-driven research projects."
-url: "https://amoolyasrinivasa.github.io"
+description: "Bioinformatics Programmer at NYU Langone Health"
+keywords: "Bioinformatics, Computational Biology, Machine Learning, Genomics"
+author: "Amoolya Srinivasa"
 baseurl: ""
-repository: "amoolyasrinivasa/amoolyasrinivasa.github.io"
-
-remote_theme: "mmistakes/minimal-mistakes@4.27.3"
-
-plugins:
-  - jekyll-remote-theme
-  - jekyll-include-cache
-  - jekyll-feed
-  - jekyll-sitemap
+url: "https://amoolyasrinivasa.github.io"
 
 markdown: kramdown
 highlighter: rouge
 permalink: /:title/
+
+name: "Amoolya Srinivasa"
 picture: "assets/images/Amoolya.jpg"
-
-search: true
-minimal_mistakes_skin: "default"
-breadcrumbs: false
-read_time: true
-words_per_minute: 200
-comments:
-  provider: false
-
-author:
-  name: "Amoolya Srinivasa"
-  avatar: "/assets/images/Amoolya.jpg"
-  bio: "Bioinformatics Programmer at NYU Langone Health"
-  location: "New York, NY"
-  links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope"
-      url: "mailto:amoolyasrinivasa@gmail.com"
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/amoolya-srinivasa"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/amoolyasrinivasa"
-
-footer:
-  links:
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/amoolya-srinivasa"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/amoolyasrinivasa"
-
-defaults:
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      share: true
-      related: true
-      show_date: true
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
-      author_profile: true
-
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
 
 exclude:
   - README.md
@@ -86,3 +19,11 @@ exclude:
   - node_modules
   - vendor
   - _legacy_theme
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      projects: true

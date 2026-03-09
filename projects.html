@@ -1,25 +1,5 @@
 ---
 title: Projects
-layout: single
+layout: projects-cards
 permalink: /projects/
-author_profile: true
-classes: wide
 ---
-
-{% assign project_posts = site.posts | where: "projects", true %}
-
-{% if project_posts.size == 0 %}
-No project posts yet.
-{% else %}
-<div class="project-grid">
-{% for post in project_posts %}
-  {% if post.title and post.hidden != true %}
-  <article class="project-card">
-    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-    <p class="project-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
-    {% if post.description %}<p>{{ post.description }}</p>{% endif %}
-  </article>
-  {% endif %}
-{% endfor %}
-</div>
-{% endif %}
