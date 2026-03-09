@@ -97,14 +97,22 @@ h6,
 
 .quick-links a:hover,
 .btn:hover,
-.greedy-nav a:hover {
+.greedy-nav a:hover,
+.site-nav a:hover,
+.links a:hover,
+.project-card-link:hover,
+.tag-chip:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.1);
 }
 
 .quick-links a:active,
 .btn:active,
-.greedy-nav a:active {
+.greedy-nav a:active,
+.site-nav a:active,
+.links a:active,
+.project-card-link:active,
+.tag-chip:active {
   transform: scale(0.97);
 }
 
@@ -175,6 +183,7 @@ h6,
   padding: 2rem 1rem 3rem;
   background: rgba(255, 255, 255, 0.93);
   border-radius: 10px;
+  animation: riseIn 0.55s ease both;
 }
 
 .page-shell h1,
@@ -182,6 +191,14 @@ h6,
 .page-shell h3 {
   color: #102027;
 }
+
+.page-shell > * {
+  animation: riseIn 0.5s ease both;
+}
+
+.page-shell > *:nth-child(2) { animation-delay: 0.05s; }
+.page-shell > *:nth-child(3) { animation-delay: 0.1s; }
+.page-shell > *:nth-child(4) { animation-delay: 0.15s; }
 
 .site-nav {
   text-align: center;
@@ -214,8 +231,8 @@ h6,
 }
 
 .home-intro-avatar {
-  width: 68px;
-  height: 68px;
+  width: 112px;
+  height: 112px;
   border-radius: 999px;
   object-fit: cover;
   border: 2px solid #dbe4ee;
@@ -235,7 +252,7 @@ h6,
 .about-gif {
   display: block;
   margin: 0.55rem auto 0;
-  width: 120px;
+  width: 220px;
   max-width: 100%;
   border-radius: 10px;
 }
@@ -262,6 +279,65 @@ h6,
   margin-top: -0.35rem;
   margin-bottom: 1rem;
   color: #334155;
+}
+
+.tag-chip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.tag-chip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--line-soft);
+  border-radius: 999px;
+  padding: 0.45rem 0.8rem;
+  text-decoration: none;
+  background: #eef7ff;
+  color: #0b5ed7;
+  font-weight: 600;
+}
+
+.tag-count {
+  font-size: 0.85rem;
+  background: #dbeafe;
+  color: #1e3a8a;
+  border-radius: 999px;
+  padding: 0.1rem 0.45rem;
+}
+
+.tag-sections {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.tag-section {
+  border: 1px solid var(--line-soft);
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  background: #ffffff;
+}
+
+.tag-section h3 {
+  margin-top: 0;
+}
+
+.tag-section-count {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.tag-post-list {
+  margin: 0.35rem 0 0;
+  padding-left: 1rem;
+}
+
+.tag-post-list li {
+  margin-bottom: 0.35rem;
 }
 
 @keyframes riseIn {
