@@ -5,6 +5,7 @@ permalink: /cv/
 author_profile: true
 classes: wide
 ---
+
 ## Amoolya Srinivasa
 <!---[srinivasa.a@northeastern.edu](mailto:srinivasa.@northeastern.edu) --->
 Boston, MA
