@@ -104,8 +104,9 @@ h6,
   padding: 0.8rem 1rem;
   text-decoration: none;
   font-weight: 500 !important;
-  color: var(--maroon);
+  color: var(--maroon) !important;
   background: #fff;
+  text-decoration: none !important;
 }
 
 .quick-links a:hover,
@@ -336,8 +337,9 @@ h6,
   padding: 0.45rem 0.8rem;
   text-decoration: none;
   background: #eef7ff;
-  color: var(--maroon);
+  color: var(--maroon) !important;
   font-weight: 400;
+  text-decoration: none !important;
 }
 
 .tag-count {
