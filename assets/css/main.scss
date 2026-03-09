@@ -19,6 +19,7 @@ html,
 body {
   font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
   color: var(--text-strong);
+  font-weight: 600;
 }
 
 a {
@@ -42,6 +43,7 @@ h6,
 .masthead__menu-item {
   font-family: "Space Grotesk", "IBM Plex Sans", sans-serif;
   letter-spacing: -0.01em;
+  font-weight: 700;
 }
 
 .masthead {
@@ -183,7 +185,7 @@ h6,
   max-width: 1040px;
   margin: 0 auto;
   padding: 2rem 1rem 3rem;
-  background: rgba(255, 255, 255, 0.93);
+  background: rgba(255, 255, 255, 0.985);
   border-radius: 10px;
   animation: riseIn 0.55s ease both;
 }
