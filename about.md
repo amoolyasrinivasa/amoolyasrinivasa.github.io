@@ -51,6 +51,8 @@ During my leisure hours, I enjoy indulging in various creative pursuits, such as
     <img src="{{site.url}}/assets/images/photo12.JPG" style="border:none; width:auto; max-height:200px;" />
     <img src="{{site.url}}/assets/images/photo13.JPG" style="border:none; width:auto; max-height:200px;" />
     <img src="{{site.url}}/assets/images/evronylab.jpg" style="border:none; width:auto; max-height:200px;" />
+    <img src="{{site.url}}/assets/images/photo14.jpg" style="border:none; width:auto; max-height:200px;" />
+    <img src="{{site.url}}/assets/images/photo15.jpg" style="border:none; width:auto; max-height:200px;" />
 </div>
 
 
