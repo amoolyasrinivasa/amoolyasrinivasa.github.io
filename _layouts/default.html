@@ -15,7 +15,7 @@ layout: compress
   <link rel="stylesheet" href="{{ '/css/normalize.css' | relative_url }}"/>
   <link rel="stylesheet" href="{{ '/fonts/font-awesome/css/font-awesome.css' | relative_url }}"/>
   <link rel="stylesheet" href="{{ '/css/modern-blog.css' | relative_url }}"/>
-  <link rel="stylesheet" href="{{ '/assets/css/main.css?v=20260309t' | relative_url }}"/>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css?v=20260309u' | relative_url }}"/>
 </head>
 <body class="body">
 <div class="container">
@@ -84,6 +84,11 @@ layout: compress
       });
     }
 
+    var zoomPanel = document.getElementById("photo-zoom-panel");
+    var zoomImage = document.getElementById("photo-zoom-image");
+    var zoomClose = document.querySelector(".photo-zoom-close");
+    if (!zoomPanel || !zoomImage) return;
+
     var photos = Array.prototype.slice.call(scrollEl.querySelectorAll(".frolics-photo"));
 
     function resolvePhotoSrc(photoEl) {
@@ -96,7 +101,27 @@ layout: compress
       if (!img) return;
       var src = resolvePhotoSrc(img);
       if (!src) return;
-      window.open(src, "_blank", "noopener,noreferrer");
+      zoomImage.src = src;
+      zoomImage.alt = img.alt || "Selected photo";
+      zoomPanel.classList.add("open");
+      zoomPanel.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    });
+
+    function closeZoom() {
+      zoomPanel.classList.remove("open");
+      zoomPanel.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+
+    if (zoomClose) zoomClose.addEventListener("click", closeZoom);
+    zoomPanel.addEventListener("click", function (event) {
+      if (event.target === zoomPanel) closeZoom();
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (!zoomPanel.classList.contains("open")) return;
+      if (event.key === "Escape") closeZoom();
     });
   })();
 </script>

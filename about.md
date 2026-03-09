@@ -60,6 +60,7 @@ During my leisure hours, I enjoy indulging in various creative pursuits, such as
 </div>
 
 <div class="photo-zoom-panel" id="photo-zoom-panel" aria-hidden="true">
+    <button class="photo-zoom-close" type="button" aria-label="Close photo preview">&times;</button>
     <img src="" alt="Selected photo" id="photo-zoom-image"/>
 </div>
 
