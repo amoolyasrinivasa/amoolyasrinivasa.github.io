@@ -15,7 +15,7 @@ layout: compress
   <link rel="stylesheet" href="{{ '/css/normalize.css' | relative_url }}"/>
   <link rel="stylesheet" href="{{ '/fonts/font-awesome/css/font-awesome.css' | relative_url }}"/>
   <link rel="stylesheet" href="{{ '/css/modern-blog.css' | relative_url }}"/>
-  <link rel="stylesheet" href="{{ '/assets/css/main.css?v=20260309u' | relative_url }}"/>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css?v=20260309v' | relative_url }}"/>
 </head>
 <body class="body">
 <div class="container">
@@ -84,10 +84,10 @@ layout: compress
       });
     }
 
-    var zoomPanel = document.getElementById("photo-zoom-panel");
-    var zoomImage = document.getElementById("photo-zoom-image");
-    var zoomClose = document.querySelector(".photo-zoom-close");
-    if (!zoomPanel || !zoomImage) return;
+    var dialog = document.getElementById("frolics-dialog");
+    var dialogImage = document.getElementById("frolics-dialog-image");
+    var dialogClose = document.querySelector(".frolics-dialog-close");
+    if (!dialog || !dialogImage) return;
 
     var photos = Array.prototype.slice.call(scrollEl.querySelectorAll(".frolics-photo"));
 
@@ -101,26 +101,29 @@ layout: compress
       if (!img) return;
       var src = resolvePhotoSrc(img);
       if (!src) return;
-      zoomImage.src = src;
-      zoomImage.alt = img.alt || "Selected photo";
-      zoomPanel.classList.add("open");
-      zoomPanel.setAttribute("aria-hidden", "false");
-      document.body.style.overflow = "hidden";
+      dialogImage.src = src;
+      dialogImage.alt = img.alt || "Selected photo";
+      if (typeof dialog.showModal === "function") {
+        dialog.showModal();
+      } else {
+        dialog.setAttribute("open", "open");
+      }
     });
 
     function closeZoom() {
-      zoomPanel.classList.remove("open");
-      zoomPanel.setAttribute("aria-hidden", "true");
-      document.body.style.overflow = "";
+      if (typeof dialog.close === "function") dialog.close();
+      dialog.removeAttribute("open");
     }
 
-    if (zoomClose) zoomClose.addEventListener("click", closeZoom);
-    zoomPanel.addEventListener("click", function (event) {
-      if (event.target === zoomPanel) closeZoom();
+    if (dialogClose) dialogClose.addEventListener("click", closeZoom);
+    dialog.addEventListener("click", function (event) {
+      var rect = dialog.getBoundingClientRect();
+      var outside = event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom;
+      if (outside) closeZoom();
     });
 
     document.addEventListener("keydown", function (event) {
-      if (!zoomPanel.classList.contains("open")) return;
+      if (!dialog.hasAttribute("open")) return;
       if (event.key === "Escape") closeZoom();
     });
   })();
