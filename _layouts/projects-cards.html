@@ -9,7 +9,9 @@ layout: default
 
 <div class="project-grid">
   {% for post in project_posts %}
+  {% assign title_lower = post.title | downcase %}
   {% if post.title and post.hidden != true %}
+  {% unless title_lower contains "prediction of downloadable quality of photographs" or title_lower contains "gpv1" %}
   {% assign card_image = '/assets/images/sarscov2/targets.png' %}
   {% if post.title contains "SARS CoV-2" %}
     {% assign card_image = '/assets/images/sarscov2/targets.png' %}
@@ -31,6 +33,7 @@ layout: default
     <p class="project-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
     {% if post.description %}<p>{{ post.description }}</p>{% endif %}
   </article>
+  {% endunless %}
   {% endif %}
   {% endfor %}
 </div>

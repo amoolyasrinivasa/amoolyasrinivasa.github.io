@@ -218,23 +218,35 @@ h6,
   display: inline-block;
   margin: 0 0.5rem;
   font-size: 0.95rem;
-  color: #dbeafe;
-  opacity: 0.95;
+  color: #0f172a;
+  opacity: 1;
   text-decoration: none;
+  font-weight: 700;
 }
 
 .site-nav a:hover {
-  color: #ffffff;
+  color: #0b1220;
   text-decoration: underline;
 }
 
 .links a {
-  color: #e2e8f0;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.header h1 {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.header h1 span {
+  color: #334155;
+  font-weight: 600;
 }
 
 .pattern {
-  opacity: 0.12 !important;
-  filter: saturate(45%) brightness(135%);
+  opacity: 0.05 !important;
+  filter: grayscale(1) saturate(0) brightness(165%);
 }
 
 .home-intro {
