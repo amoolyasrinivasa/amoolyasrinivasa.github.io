@@ -6,8 +6,6 @@ author_profile: true
 classes: wide
 ---
 
-<section class="cv-dna" markdown="1">
-
 ## Amoolya Srinivasa
 <!---[srinivasa.a@northeastern.edu](mailto:srinivasa.@northeastern.edu) --->
 New York, NY
@@ -79,5 +77,3 @@ In this five-part online course, I explored the promise that stem cells hold for
 
 **[Genomic Data Science: Offered by Johns Hopkins University on Coursera, Nov 2019](https://www.coursera.org/specializations/genomic-data-science)**<br>
 Through this course, I was able to gain insights about how genomics is revolutionizing medical discoveries and that it's neccessity in understanding the genome and leverage the data and information from genomic datasets. The course covered the concepts and tools to understand, analyze, and interpret data from next-generation sequencing experiments. Through this course, I learned about the most common tools used in genomic data science, including the use of the command line, along with a variety of software implementation tools like Python, R, and Bioconductor. The course was designed to serve as both a standalone introduction to genomic data science or as a perfect complement to a primary degree or postdoc in biology, molecular biology, or genetics. As a scientist in these fields, seeking to gain familiarity in data science and statistical tools to better interact with the data in my everyday work, I found this course to be highly valuable.
-
-</section>

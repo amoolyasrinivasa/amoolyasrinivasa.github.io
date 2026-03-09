@@ -215,30 +215,24 @@ h6,
 .page-shell > *:nth-child(3) { animation-delay: 0.1s; }
 .page-shell > *:nth-child(4) { animation-delay: 0.15s; }
 
-.cv-dna {
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-  padding: 1.1rem 1.2rem 1.3rem;
-  background: rgba(255, 255, 255, 0.9);
-}
-
-.cv-dna::before {
-  content: "";
-  position: absolute;
-  inset: 0;
+.dna-footer-banner {
+  width: 100vw;
+  height: 120px;
+  margin-top: 1.2rem;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  border-top: 1px solid var(--line-soft);
+  border-bottom: 1px solid var(--line-soft);
   background-image: url("/assets/images/dna.gif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.4;
-  pointer-events: none;
-  z-index: 0;
 }
 
-.cv-dna > * {
-  position: relative;
-  z-index: 1;
+@media (max-width: 768px) {
+  .dna-footer-banner {
+    height: 92px;
+  }
 }
 
 .site-nav {
