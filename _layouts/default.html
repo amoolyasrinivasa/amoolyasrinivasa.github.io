@@ -15,7 +15,7 @@ layout: compress
   <link rel="stylesheet" href="{{ '/css/normalize.css' | relative_url }}"/>
   <link rel="stylesheet" href="{{ '/fonts/font-awesome/css/font-awesome.css' | relative_url }}"/>
   <link rel="stylesheet" href="{{ '/css/modern-blog.css' | relative_url }}"/>
-  <link rel="stylesheet" href="{{ '/assets/css/main.css?v=20260309l' | relative_url }}"/>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css?v=20260309m' | relative_url }}"/>
 </head>
 <body class="body">
 <div class="container">
@@ -94,11 +94,18 @@ layout: compress
     var photos = Array.prototype.slice.call(scrollEl.querySelectorAll(".frolics-photo"));
     var currentIndex = -1;
 
+    function resolvePhotoSrc(photoEl) {
+      if (!photoEl) return "";
+      return photoEl.getAttribute("src") || photoEl.currentSrc || photoEl.src || "";
+    }
+
     function showPhoto(index) {
       if (!photos.length) return;
       currentIndex = (index + photos.length) % photos.length;
       var active = photos[currentIndex];
-      lightboxImage.src = active.src;
+      var src = resolvePhotoSrc(active);
+      if (!src) return;
+      lightboxImage.src = src;
       lightboxImage.alt = active.alt || "Expanded photo";
     }
 
@@ -114,7 +121,6 @@ layout: compress
     function closeLightbox() {
       lightbox.classList.remove("open");
       lightbox.setAttribute("aria-hidden", "true");
-      lightboxImage.src = "";
       document.body.style.overflow = "";
     }
 
