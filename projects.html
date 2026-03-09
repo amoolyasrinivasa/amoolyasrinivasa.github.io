@@ -6,14 +6,14 @@ author_profile: true
 classes: wide
 ---
 
-{% assign project_posts = site.posts %}
+{% assign project_posts = site.posts | where: "projects", true %}
 
 {% if project_posts.size == 0 %}
 No project posts yet.
 {% else %}
 <div class="project-grid">
 {% for post in project_posts %}
-  {% if post.title and post.hidden != true and post.title != "Identification of Natural GPVI Receptor Antagonists Using Molecular Docking and Molecular Dynamics" %}
+  {% if post.title and post.hidden != true %}
   <article class="project-card">
     <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
     <p class="project-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
