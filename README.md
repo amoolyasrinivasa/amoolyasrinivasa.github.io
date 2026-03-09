@@ -1,4 +1,4 @@
-Personal site built with Jekyll using the [Minimal Mistakes theme](https://github.com/mmistakes/minimal-mistakes).
+Personal site built with Jekyll using the [ModernBlog theme](https://github.com/inded/Jekyll_modern-blog).
 
 ## Local development
 
