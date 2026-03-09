@@ -59,13 +59,13 @@ During my leisure hours, I enjoy indulging in various creative pursuits, such as
     <button class="frolics-nav frolics-nav-right" type="button" aria-label="Scroll photos right">&#10095;</button>
 </div>
 
-<div class="photo-lightbox" id="photo-lightbox" aria-hidden="true">
-    <button class="photo-lightbox-nav photo-lightbox-prev" type="button" aria-label="Previous photo">&#10094;</button>
-    <button class="photo-lightbox-close" type="button" aria-label="Close image viewer">&times;</button>
-    <div class="photo-lightbox-stage">
-        <img src="" alt="Expanded photo" id="photo-lightbox-image"/>
+<div class="photo-preview" id="photo-preview">
+    <div class="photo-preview-toolbar">
+        <button class="photo-preview-nav photo-preview-prev" type="button" aria-label="Previous photo">&#10094;</button>
+        <span class="photo-preview-label" id="photo-preview-label">Click a photo to preview</span>
+        <button class="photo-preview-nav photo-preview-next" type="button" aria-label="Next photo">&#10095;</button>
     </div>
-    <button class="photo-lightbox-nav photo-lightbox-next" type="button" aria-label="Next photo">&#10095;</button>
+    <img src="" alt="Selected photo preview" id="photo-preview-image"/>
 </div>
 
 Connect and say hi on [LinkedIn](https://www.linkedin.com/in/amoolya-srinivasa) or reach out via [Email](mailto:srinivasa.a@northeastern.edu)

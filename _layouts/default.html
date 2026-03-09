@@ -15,7 +15,7 @@ layout: compress
   <link rel="stylesheet" href="{{ '/css/normalize.css' | relative_url }}"/>
   <link rel="stylesheet" href="{{ '/fonts/font-awesome/css/font-awesome.css' | relative_url }}"/>
   <link rel="stylesheet" href="{{ '/css/modern-blog.css' | relative_url }}"/>
-  <link rel="stylesheet" href="{{ '/assets/css/main.css?v=20260309o' | relative_url }}"/>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css?v=20260309p' | relative_url }}"/>
 </head>
 <body class="body">
 <div class="container">
@@ -84,12 +84,11 @@ layout: compress
       });
     }
 
-    var lightbox = document.getElementById("photo-lightbox");
-    var lightboxImage = document.getElementById("photo-lightbox-image");
-    var closeButton = document.querySelector(".photo-lightbox-close");
-    var prevButton = document.querySelector(".photo-lightbox-prev");
-    var nextButton = document.querySelector(".photo-lightbox-next");
-    if (!lightbox || !lightboxImage) return;
+    var previewImage = document.getElementById("photo-preview-image");
+    var previewLabel = document.getElementById("photo-preview-label");
+    var prevButton = document.querySelector(".photo-preview-prev");
+    var nextButton = document.querySelector(".photo-preview-next");
+    if (!previewImage) return;
 
     var photos = Array.prototype.slice.call(scrollEl.querySelectorAll(".frolics-photo"));
     var currentIndex = -1;
@@ -105,24 +104,19 @@ layout: compress
       var active = photos[currentIndex];
       var src = resolvePhotoSrc(active);
       if (!src) return;
-      lightboxImage.src = src;
-      lightboxImage.alt = active.alt || "Expanded photo";
+      previewImage.src = src;
+      previewImage.alt = active.alt || "Selected photo preview";
+      if (previewLabel) {
+        previewLabel.textContent = active.alt || ("Photo " + (currentIndex + 1));
+      }
     }
 
     scrollEl.addEventListener("click", function (event) {
       var img = event.target.closest(".frolics-photo");
       if (!img) return;
       showPhoto(photos.indexOf(img));
-      lightbox.classList.add("open");
-      lightbox.setAttribute("aria-hidden", "false");
-      document.body.style.overflow = "hidden";
+      previewImage.scrollIntoView({ behavior: "smooth", block: "nearest" });
     });
-
-    function closeLightbox() {
-      lightbox.classList.remove("open");
-      lightbox.setAttribute("aria-hidden", "true");
-      document.body.style.overflow = "";
-    }
 
     function showNext() {
       if (currentIndex < 0) return;
@@ -134,22 +128,16 @@ layout: compress
       showPhoto(currentIndex - 1);
     }
 
-    if (closeButton) {
-      closeButton.addEventListener("click", closeLightbox);
-    }
     if (prevButton) prevButton.addEventListener("click", showPrev);
     if (nextButton) nextButton.addEventListener("click", showNext);
 
-    lightbox.addEventListener("click", function (event) {
-      if (event.target === lightbox) closeLightbox();
-    });
-
     document.addEventListener("keydown", function (event) {
-      if (!lightbox.classList.contains("open")) return;
-      if (event.key === "Escape") closeLightbox();
+      if (currentIndex < 0) return;
       if (event.key === "ArrowRight") showNext();
       if (event.key === "ArrowLeft") showPrev();
     });
+
+    if (photos.length) showPhoto(0);
   })();
 </script>
 </body>
