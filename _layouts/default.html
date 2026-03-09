@@ -15,7 +15,7 @@ layout: compress
   <link rel="stylesheet" href="{{ '/css/normalize.css' | relative_url }}"/>
   <link rel="stylesheet" href="{{ '/fonts/font-awesome/css/font-awesome.css' | relative_url }}"/>
   <link rel="stylesheet" href="{{ '/css/modern-blog.css' | relative_url }}"/>
-  <link rel="stylesheet" href="{{ '/assets/css/main.css?v=20260309i' | relative_url }}"/>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css?v=20260309j' | relative_url }}"/>
 </head>
 <body class="body">
 <div class="container">
@@ -61,6 +61,63 @@ layout: compress
       setTimeout(function () {
         el.classList.remove("click-pop");
       }, 320);
+    });
+  })();
+
+  (function () {
+    var scrollEl = document.getElementById("photo-frolics-scroll");
+    if (!scrollEl) return;
+
+    var leftBtn = document.querySelector(".frolics-nav-left");
+    var rightBtn = document.querySelector(".frolics-nav-right");
+    var step = 420;
+
+    if (leftBtn) {
+      leftBtn.addEventListener("click", function () {
+        scrollEl.scrollBy({ left: -step, behavior: "smooth" });
+      });
+    }
+
+    if (rightBtn) {
+      rightBtn.addEventListener("click", function () {
+        scrollEl.scrollBy({ left: step, behavior: "smooth" });
+      });
+    }
+
+    var lightbox = document.getElementById("photo-lightbox");
+    var lightboxImage = document.getElementById("photo-lightbox-image");
+    var closeButton = document.querySelector(".photo-lightbox-close");
+    if (!lightbox || !lightboxImage) return;
+
+    scrollEl.addEventListener("click", function (event) {
+      var img = event.target.closest(".frolics-photo");
+      if (!img) return;
+      lightboxImage.src = img.src;
+      lightboxImage.alt = img.alt || "Expanded photo";
+      lightbox.classList.add("open");
+      lightbox.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden", "true");
+      lightboxImage.src = "";
+      document.body.style.overflow = "";
+    }
+
+    if (closeButton) {
+      closeButton.addEventListener("click", closeLightbox);
+    }
+
+    lightbox.addEventListener("click", function (event) {
+      if (event.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && lightbox.classList.contains("open")) {
+        closeLightbox();
+      }
     });
   })();
 </script>
