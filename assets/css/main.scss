@@ -19,12 +19,13 @@ html,
 body {
   font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
   color: var(--text-strong);
-  font-weight: 700;
+  font-weight: 400;
+  background: #ffffff;
 }
 
 p, li {
   color: #0b1220;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 a {
@@ -98,7 +99,7 @@ h6,
   border-radius: 12px;
   padding: 0.8rem 1rem;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 400;
   color: #0b132b;
   background: #fff;
 }
@@ -221,7 +222,7 @@ h6,
   color: #0f172a;
   opacity: 1;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .site-nav a:hover {
@@ -231,7 +232,7 @@ h6,
 
 .links a {
   color: #0f172a;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .header h1 {
@@ -241,12 +242,11 @@ h6,
 
 .header h1 span {
   color: #334155;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .pattern {
-  opacity: 0.05 !important;
-  filter: grayscale(1) saturate(0) brightness(165%);
+  display: none !important;
 }
 
 .home-intro {
@@ -325,7 +325,7 @@ h6,
   text-decoration: none;
   background: #eef7ff;
   color: #0b5ed7;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .tag-count {
