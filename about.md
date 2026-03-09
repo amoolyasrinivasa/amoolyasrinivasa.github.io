@@ -59,11 +59,8 @@ During my leisure hours, I enjoy indulging in various creative pursuits, such as
     <button class="frolics-nav frolics-nav-right" type="button" aria-label="Scroll photos right">&#10095;</button>
 </div>
 
-<div class="photo-modal" id="photo-modal" aria-hidden="true">
-    <button class="photo-modal-close" type="button" aria-label="Close preview">&times;</button>
-    <button class="photo-modal-nav photo-modal-prev" type="button" aria-label="Previous photo">&#10094;</button>
-    <img src="" alt="Expanded photo" id="photo-modal-image"/>
-    <button class="photo-modal-nav photo-modal-next" type="button" aria-label="Next photo">&#10095;</button>
+<div class="photo-zoom-panel" id="photo-zoom-panel" aria-hidden="true">
+    <img src="" alt="Selected photo" id="photo-zoom-image"/>
 </div>
 
 Connect and say hi on [LinkedIn](https://www.linkedin.com/in/amoolya-srinivasa) or reach out via [Email](mailto:srinivasa.a@northeastern.edu)

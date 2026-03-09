@@ -15,7 +15,7 @@ layout: compress
   <link rel="stylesheet" href="{{ '/css/normalize.css' | relative_url }}"/>
   <link rel="stylesheet" href="{{ '/fonts/font-awesome/css/font-awesome.css' | relative_url }}"/>
   <link rel="stylesheet" href="{{ '/css/modern-blog.css' | relative_url }}"/>
-  <link rel="stylesheet" href="{{ '/assets/css/main.css?v=20260309r' | relative_url }}"/>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css?v=20260309s' | relative_url }}"/>
 </head>
 <body class="body">
 <div class="container">
@@ -84,12 +84,9 @@ layout: compress
       });
     }
 
-    var modal = document.getElementById("photo-modal");
-    var modalImage = document.getElementById("photo-modal-image");
-    var prevButton = document.querySelector(".photo-modal-prev");
-    var nextButton = document.querySelector(".photo-modal-next");
-    var closeButton = document.querySelector(".photo-modal-close");
-    if (!modal || !modalImage) return;
+    var zoomPanel = document.getElementById("photo-zoom-panel");
+    var zoomImage = document.getElementById("photo-zoom-image");
+    if (!zoomPanel || !zoomImage) return;
 
     var photos = Array.prototype.slice.call(scrollEl.querySelectorAll(".frolics-photo"));
     var currentIndex = -1;
@@ -105,31 +102,25 @@ layout: compress
       var active = photos[currentIndex];
       var src = resolvePhotoSrc(active);
       if (!src) return;
-      modalImage.src = src;
-      modalImage.alt = active.alt || "Expanded photo";
+      zoomImage.src = src;
+      zoomImage.alt = active.alt || "Selected photo";
+      zoomPanel.classList.add("open");
+      zoomPanel.setAttribute("aria-hidden", "false");
     }
 
-    modalImage.addEventListener("error", function () {
+    zoomImage.addEventListener("error", function () {
       var active = photos[currentIndex];
       if (!active) return;
       var fallback = active.getAttribute("src") || active.currentSrc || active.src || "";
-      if (fallback && modalImage.src !== fallback) modalImage.src = fallback;
+      if (fallback && zoomImage.src !== fallback) zoomImage.src = fallback;
     });
 
     scrollEl.addEventListener("click", function (event) {
       var img = event.target.closest(".frolics-photo");
       if (!img) return;
       showPhoto(photos.indexOf(img));
-      modal.classList.add("open");
-      modal.setAttribute("aria-hidden", "false");
-      document.body.style.overflow = "hidden";
+      zoomPanel.scrollIntoView({ behavior: "smooth", block: "nearest" });
     });
-
-    function closeModal() {
-      modal.classList.remove("open");
-      modal.setAttribute("aria-hidden", "true");
-      document.body.style.overflow = "";
-    }
 
     function showNext() {
       if (currentIndex < 0) return;
@@ -141,16 +132,8 @@ layout: compress
       showPhoto(currentIndex - 1);
     }
 
-    if (closeButton) closeButton.addEventListener("click", closeModal);
-    if (prevButton) prevButton.addEventListener("click", showPrev);
-    if (nextButton) nextButton.addEventListener("click", showNext);
-    modal.addEventListener("click", function (event) {
-      if (event.target === modal) closeModal();
-    });
-
     document.addEventListener("keydown", function (event) {
-      if (!modal.classList.contains("open")) return;
-      if (event.key === "Escape") closeModal();
+      if (currentIndex < 0) return;
       if (event.key === "ArrowRight") showNext();
       if (event.key === "ArrowLeft") showPrev();
     });
