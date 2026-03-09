@@ -12,23 +12,30 @@ layout: default
   {% assign title_lower = post.title | downcase %}
   {% if post.title and post.hidden != true %}
   {% unless title_lower contains "prediction of downloadable quality of photographs" or title_lower contains "gpv1" %}
-  {% assign card_image = 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Artificial_neural_network.svg/1024px-Artificial_neural_network.svg.png' %}
+  {% assign card_image = 'https://images.unsplash.com/photo-1530026186672-2cd00ffc50fe?auto=format&fit=crop&w=1200&q=80' %}
+  {% assign fallback_image = '/assets/images/sarscov2/targets.png' %}
   {% if post.title contains "SARS CoV-2" %}
-    {% assign card_image = 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/SARS-CoV-2_without_background.png/1024px-SARS-CoV-2_without_background.png' %}
+    {% assign card_image = 'https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?auto=format&fit=crop&w=1200&q=80' %}
+    {% assign fallback_image = '/assets/images/sarscov2/targets.png' %}
   {% elsif post.title contains "Ascorbic Acid" %}
-    {% assign card_image = 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Protein_structure_examples.png/1024px-Protein_structure_examples.png' %}
+    {% assign card_image = 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1200&q=80' %}
+    {% assign fallback_image = '/assets/images/bioenzyme/bioenzyme.png' %}
   {% elsif post.title contains "Chemical Dependence" %}
-    {% assign card_image = 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Histogram_and_density_plot.svg/1024px-Histogram_and_density_plot.svg.png' %}
+    {% assign card_image = 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80' %}
+    {% assign fallback_image = '/assets/images/chemicaldependence_ML/chemdep.png' %}
   {% elsif post.title contains "Cervical Cancer" %}
-    {% assign card_image = 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Deep_Learning.jpg/1024px-Deep_Learning.jpg' %}
+    {% assign card_image = 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&q=80' %}
+    {% assign fallback_image = '/assets/images/cervicalcancer_ML/ccml_corplot.png' %}
   {% elsif post.title contains "downloadable quality of photographs" %}
-    {% assign card_image = 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Camera_icon.svg/1024px-Camera_icon.svg.png' %}
+    {% assign card_image = 'https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&w=1200&q=80' %}
+    {% assign fallback_image = '/assets/images/photo3.jpg' %}
   {% elsif post.title contains "GPVI" %}
-    {% assign card_image = 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Protein_hemoglobin.png/1024px-Protein_hemoglobin.png' %}
+    {% assign card_image = 'https://images.unsplash.com/photo-1530026405186-ed1f139313f8?auto=format&fit=crop&w=1200&q=80' %}
+    {% assign fallback_image = '/assets/images/GPVI/gpvi.png' %}
   {% endif %}
 
   <article class="project-card">
-    <img src="{{ card_image }}" alt="Scientific abstract for {{ post.title }}" class="project-thumb" />
+    <img src="{{ card_image }}" alt="Scientific abstract for {{ post.title }}" class="project-thumb" onerror="this.onerror=null;this.src='{{ fallback_image | relative_url }}';" />
     <h3><a href="{{ post.url | relative_url }}" class="project-card-link">{{ post.title }}</a></h3>
     <p class="project-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
     {% if post.description %}<p>{{ post.description }}</p>{% endif %}
