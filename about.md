@@ -32,8 +32,10 @@ During my leisure hours, I enjoy indulging in various creative pursuits, such as
 ---**Photo Frolics**
 
 <div class="photo-frolics-scroll">
-    <img src="{{site.url}}/assets/images/bbq.jpg" style="border:none; width:auto; max-height:200px;" />
-     <img src="{{site.url}}/assets/images/grad.jpg" style="border:none; width:auto; max-height:200px;" />
+    <img src="{{site.url}}/assets/images/photo16.jpg" style="border:none; width:auto; max-height:200px;" />
+    <img src="{{site.url}}/assets/images/photo14.jpg" style="border:none; width:auto; max-height:200px;" />
+    <img src="{{site.url}}/assets/images/photo15.jpg" style="border:none; width:auto; max-height:200px;" />
+    <img src="{{site.url}}/assets/images/grad.jpg" style="border:none; width:auto; max-height:200px;" />
     <img src="{{site.url}}/assets/images/bowl.jpg" style="border:none; width:auto; max-height:200px;" />
     <img src="{{site.url}}/assets/images/fog2.jpg" style="border:none; width:auto; max-height:200px;" />
     <img src="{{site.url}}/assets/images/nextrna.jpeg" style="border:none; width:auto; max-height:200px;" />
@@ -53,6 +55,7 @@ During my leisure hours, I enjoy indulging in various creative pursuits, such as
     <img src="{{site.url}}/assets/images/evronylab.jpg" style="border:none; width:auto; max-height:200px;" />
     <img src="{{site.url}}/assets/images/photo14.jpg" style="border:none; width:auto; max-height:200px;" />
     <img src="{{site.url}}/assets/images/photo15.jpg" style="border:none; width:auto; max-height:200px;" />
+    <img src="{{site.url}}/assets/images/bbq.jpg" style="border:none; width:auto; max-height:200px;" />
 </div>
 
 
