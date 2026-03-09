@@ -1,0 +1,15 @@
+<script>
+  (function () {
+    var selectors = '.quick-links a, .btn, .greedy-nav a';
+    document.addEventListener('click', function (event) {
+      var el = event.target.closest(selectors);
+      if (!el) return;
+      el.classList.remove('click-pop');
+      void el.offsetWidth;
+      el.classList.add('click-pop');
+      setTimeout(function () {
+        el.classList.remove('click-pop');
+      }, 320);
+    });
+  })();
+</script>
