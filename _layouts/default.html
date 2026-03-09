@@ -90,24 +90,32 @@ layout: compress
     if (!dialog || !dialogImage) return;
 
     var photos = Array.prototype.slice.call(scrollEl.querySelectorAll(".frolics-photo"));
+    var currentIndex = -1;
 
     function resolvePhotoSrc(photoEl) {
       if (!photoEl) return "";
       return photoEl.getAttribute("data-full") || photoEl.getAttribute("src") || photoEl.currentSrc || photoEl.src || "";
     }
 
-    scrollEl.addEventListener("click", function (event) {
-      var img = event.target.closest(".frolics-photo");
-      if (!img) return;
+    function showPhoto(index) {
+      if (!photos.length) return;
+      currentIndex = (index + photos.length) % photos.length;
+      var img = photos[currentIndex];
       var src = resolvePhotoSrc(img);
       if (!src) return;
       dialogImage.src = src;
       dialogImage.alt = img.alt || "Selected photo";
-      if (typeof dialog.showModal === "function") {
+      if (!dialog.hasAttribute("open") && typeof dialog.showModal === "function") {
         dialog.showModal();
-      } else {
+      } else if (!dialog.hasAttribute("open")) {
         dialog.setAttribute("open", "open");
       }
+    }
+
+    scrollEl.addEventListener("click", function (event) {
+      var img = event.target.closest(".frolics-photo");
+      if (!img) return;
+      showPhoto(photos.indexOf(img));
     });
 
     function closeZoom() {
@@ -125,6 +133,8 @@ layout: compress
     document.addEventListener("keydown", function (event) {
       if (!dialog.hasAttribute("open")) return;
       if (event.key === "Escape") closeZoom();
+      if (event.key === "ArrowRight") showPhoto(currentIndex + 1);
+      if (event.key === "ArrowLeft") showPhoto(currentIndex - 1);
     });
   })();
 </script>
