@@ -35,26 +35,26 @@ During my leisure hours, I enjoy indulging in various creative pursuits, such as
     <button class="frolics-nav frolics-nav-left" type="button" aria-label="Scroll photos left">&#10094;</button>
     <div class="photo-frolics-scroll" id="photo-frolics-scroll">
         <img src="{{ '/assets/images/photo16.jpg' | relative_url }}" data-full="{{ '/assets/images/photo16.jpg' | relative_url }}" alt="Photo frolic 16" class="frolics-photo"/>
-        <img src="{{ '/assets/images/photo14.jpg' | relative_url }}" data-full="{{ '/assets/images/photo14.jpg' | relative_url }}" alt="Photo frolic 14" class="frolics-photo"/>
-        <img src="{{ '/assets/images/photo10.jpeg' | relative_url }}" data-full="{{ '/assets/images/photo10.jpeg' | relative_url }}" alt="Photo frolic 10" class="frolics-photo"/>
-        <img src="{{ '/assets/images/photo15.jpeg' | relative_url }}" data-full="{{ '/assets/images/photo15.jpeg' | relative_url }}" alt="Photo frolic 15" class="frolics-photo"/>
-        <img src="{{ '/assets/images/grad.jpg' | relative_url }}" data-full="{{ '/assets/images/grad.jpg' | relative_url }}" alt="Graduation moment" class="frolics-photo"/>
+	<img src="{{ '/assets/images/photo1.jpg' | relative_url }}" data-full="{{ '/assets/images/photo1.jpg' | relative_url }}" alt="Photo frolic 1" class="frolics-photo"/>        
+	<img src="{{ '/assets/images/photo14.jpg' | relative_url }}" data-full="{{ '/assets/images/photo14.jpg' | relative_url }}" alt="Photo frolic 14" class="frolics-photo"/>
+	<img src="{{ '/assets/images/grad.jpg' | relative_url }}" data-full="{{ '/assets/images/grad.jpg' | relative_url }}" alt="Graduation moment" class="frolics-photo"/>        
+	<img src="{{ '/assets/images/photo10.jpeg' | relative_url }}" data-full="{{ '/assets/images/photo10.jpeg' | relative_url }}" alt="Photo frolic 10" class="frolics-photo"/>
+	<img src="{{ '/assets/images/photo2.jpeg' | relative_url }}" data-full="{{ '/assets/images/photo2.jpeg' | relative_url }}" alt="Photo frolic 2" class="frolics-photo"/>        
+	<img src="{{ '/assets/images/nextrna.jpeg' | relative_url }}" data-full="{{ '/assets/images/nextrna.jpeg' | relative_url }}" alt="NextRNA memory" class="frolics-photo"/>	
+	<img src="{{ '/assets/images/photo15.jpeg' | relative_url }}" data-full="{{ '/assets/images/photo15.jpeg' | relative_url }}" alt="Photo frolic 15" class="frolics-photo"/>
         <img src="{{ '/assets/images/fog2.jpg' | relative_url }}" data-full="{{ '/assets/images/fog2.jpg' | relative_url }}" alt="Fog scene" class="frolics-photo"/>
         <img src="{{ '/assets/images/photo12.jpg' | relative_url }}" data-full="{{ '/assets/images/photo12.jpg' | relative_url }}" alt="Photo frolic 12" class="frolics-photo"/>
-        <img src="{{ '/assets/images/nextrna.jpeg' | relative_url }}" data-full="{{ '/assets/images/nextrna.jpeg' | relative_url }}" alt="NextRNA memory" class="frolics-photo"/>
-        <img src="{{ '/assets/images/photo1.jpg' | relative_url }}" data-full="{{ '/assets/images/photo1.jpg' | relative_url }}" alt="Photo frolic 1" class="frolics-photo"/>
-        <img src="{{ '/assets/images/photo2.jpeg' | relative_url }}" data-full="{{ '/assets/images/photo2.jpeg' | relative_url }}" alt="Photo frolic 2" class="frolics-photo"/>
         <img src="{{ '/assets/images/photo3.jpg' | relative_url }}" data-full="{{ '/assets/images/photo3.jpg' | relative_url }}" alt="Photo frolic 3" class="frolics-photo"/>
         <img src="{{ '/assets/images/photo4.jpg' | relative_url }}" data-full="{{ '/assets/images/photo4.jpg' | relative_url }}" alt="Photo frolic 4" class="frolics-photo"/>
         <img src="{{ '/assets/images/photo5.jpg' | relative_url }}" data-full="{{ '/assets/images/photo5.jpg' | relative_url }}" alt="Photo frolic 5" class="frolics-photo"/>
         <img src="{{ '/assets/images/photo6.JPG' | relative_url }}" data-full="{{ '/assets/images/photo6.JPG' | relative_url }}" alt="Photo frolic 6" class="frolics-photo"/>
-        <img src="{{ '/assets/images/photo7.jpg' | relative_url }}" data-full="{{ '/assets/images/photo7.jpg' | relative_url }}" alt="Photo frolic 7" class="frolics-photo"/>
+ 	<img src="{{ '/assets/images/bbq.jpg' | relative_url }}" data-full="{{ '/assets/images/bbq.jpg' | relative_url }}" alt="BBQ memory" class="frolics-photo"/>        
+	<img src="{{ '/assets/images/photo7.jpg' | relative_url }}" data-full="{{ '/assets/images/photo7.jpg' | relative_url }}" alt="Photo frolic 7" class="frolics-photo"/>
         <img src="{{ '/assets/images/photo8.jpg' | relative_url }}" data-full="{{ '/assets/images/photo8.jpg' | relative_url }}" alt="Photo frolic 8" class="frolics-photo"/>
         <img src="{{ '/assets/images/photo9.JPG' | relative_url }}" data-full="{{ '/assets/images/photo9.JPG' | relative_url }}" alt="Photo frolic 9" class="frolics-photo"/>
         <img src="{{ '/assets/images/photo11.jpg' | relative_url }}" data-full="{{ '/assets/images/photo11.jpg' | relative_url }}" alt="Photo frolic 11" class="frolics-photo"/>
         <img src="{{ '/assets/images/photo13.JPG' | relative_url }}" data-full="{{ '/assets/images/photo13.JPG' | relative_url }}" alt="Photo frolic 13" class="frolics-photo"/>
         <img src="{{ '/assets/images/evronylab.jpg' | relative_url }}" data-full="{{ '/assets/images/evronylab.jpg' | relative_url }}" alt="Evrony Lab memory" class="frolics-photo"/>
-        <img src="{{ '/assets/images/bbq.jpg' | relative_url }}" data-full="{{ '/assets/images/bbq.jpg' | relative_url }}" alt="BBQ memory" class="frolics-photo"/>
     </div>
     <button class="frolics-nav frolics-nav-right" type="button" aria-label="Scroll photos right">&#10095;</button>
 </div>
