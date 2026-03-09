@@ -386,28 +386,30 @@ h6,
 }
 
 .photo-lightbox-stage {
-  width: min(82vw, 980px);
-  height: min(78vh, 760px);
+  width: auto;
+  height: auto;
+  max-width: 90vw;
+  max-height: 84vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  background: transparent !important;
-  border: 0;
-  box-shadow: none;
+  overflow: visible;
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
 }
 
 .photo-lightbox img {
   display: block;
   margin: 0 auto;
-  max-width: 100% !important;
-  max-height: 100% !important;
+  max-width: 90vw !important;
+  max-height: 84vh !important;
   width: auto !important;
   height: auto !important;
-  object-fit: contain;
-  background: transparent !important;
+  object-fit: contain !important;
+  background: none !important;
   border-radius: 8px;
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28);
+  box-shadow: none;
 }
 
 .photo-lightbox-close {
@@ -460,8 +462,8 @@ h6,
   }
 
   .photo-lightbox img {
-    max-width: 100% !important;
-    max-height: 100% !important;
+    max-width: 92vw !important;
+    max-height: 78vh !important;
   }
 
   .photo-lightbox-nav {
@@ -471,8 +473,8 @@ h6,
   }
 
   .photo-lightbox-stage {
-    width: 88vw;
-    height: 72vh;
+    max-width: 92vw;
+    max-height: 78vh;
   }
 }
 
