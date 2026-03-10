@@ -12,19 +12,19 @@ layout: default
   {% assign title_lower = post.title | downcase %}
   {% if post.title and post.hidden != true %}
   {% unless title_lower contains "prediction of downloadable quality of photographs" or title_lower contains "gpv1" %}
-  {% assign card_image = 'https://images.unsplash.com/photo-1530026186672-2cd00ffc50fe?auto=format&fit=crop&w=1200&q=80' %}
+  {% assign card_image = '/assets/images/thumbnail-gpvi.png' %}
   {% assign fallback_image = '/assets/images/sarscov2/targets.png' %}
   {% if post.title contains "SARS CoV-2" %}
     {% assign card_image = 'https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?auto=format&fit=crop&w=1200&q=80' %}
     {% assign fallback_image = '/assets/images/sarscov2/targets.png' %}
   {% elsif post.title contains "Ascorbic Acid" %}
-    {% assign card_image = 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1200&q=80' %}
+    {% assign card_image = '/assets/images/thumbnail-biorem.png' %}
     {% assign fallback_image = '/assets/images/bioenzyme/bioenzyme.png' %}
   {% elsif post.title contains "Chemical Dependence" %}
-    {% assign card_image = 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80' %}
+    {% assign card_image = '/assets/images/thumbnail-chem.png' %}
     {% assign fallback_image = '/assets/images/chemicaldependence_ML/chemdep.png' %}
   {% elsif post.title contains "Cervical Cancer" %}
-    {% assign card_image = 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&q=80' %}
+    {% assign card_image = '/assets/images/thumbnail-cervic.png' %}
     {% assign fallback_image = '/assets/images/cervicalcancer_ML/ccml_corplot.png' %}
   {% elsif post.title contains "downloadable quality of photographs" %}
     {% assign card_image = 'https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&w=1200&q=80' %}
